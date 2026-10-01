@@ -32,7 +32,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_sources.py
 
-      - name: 运行 08_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
+      - name: 运行 09_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
         env:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_iptv_split_18.py || true
@@ -71,20 +71,20 @@ jobs:
           git clone --depth 1 https://github.com/gaotianliuyun/gao.git repos/gaotianliuyun || true
           git clone --depth 1 https://github.com/laoma2053/awesome-zhuiju-free.git repos/laoma2053 || true
 
-      - name: 运行 03号深解析 (专干域名) + 04号纯IP (专干IP) + 05号海报 + 06号通用发布页扒取
+      - name: 运行 03号深解析 (专干域名) + 04号纯IP + 05号海报 + 06号发布页 + 07号PY源码域名扒取
         env:
           PYTHONUNBUFFERED: "1"
           FORCE_CDN_RESOLVE: "1"
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; from scripts.extract_image_domains import extract_all_poster_image_domains; from scripts.extract_release_page_domains import extract_all_release_page_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); pure_ips = extract_ip_addresses_and_dns(sites, g_doms); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); rel_doms = extract_all_release_page_domains(); open('grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2)); open('extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2)); open('dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2)); open('extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; from scripts.extract_image_domains import extract_all_poster_image_domains; from scripts.extract_release_page_domains import extract_all_release_page_domains; from scripts.extract_py_code_domains import extract_all_py_code_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); pure_ips = extract_ip_addresses_and_dns(sites, g_doms); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); rel_doms = extract_all_release_page_domains(); py_doms = extract_all_py_code_domains(); open('grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2)); open('extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2)); open('dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2)); open('extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2)); open('extracted_py_code_domains.json', 'w').write(json.dumps(py_doms, ensure_ascii=False, indent=2))"
 
-      - name: 自动 Push 深解析出来的 域名/IP/海报/发布页缓存
+      - name: 自动 Push 深解析出来的 域名/IP/海报/发布页/PY源码缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add grouped_cdn_domains.json extracted_ip_addresses.json dynamic_image_domains.json extracted_release_page_domains.json || true
+          git add grouped_cdn_domains.json extracted_ip_addresses.json dynamic_image_domains.json extracted_release_page_domains.json extracted_py_code_domains.json || true
           git diff --cached --quiet && echo "域名缓存无变更，跳过提交" && exit 0
-          git commit -m "auto: 00任务链-第二步播放域名/纯IP/海报/通用发布页深解析完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
+          git commit -m "auto: 00任务链-第二步播放域名/纯IP/海报/发布页/PY源码域名深解析完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
           git pull --rebase origin main || true
           git push origin HEAD:main --force
 
@@ -104,11 +104,11 @@ jobs:
       - name: 安装依赖 (含 tldextract)
         run: pip install -r requirements.txt
 
-      - name: 运行 07 号规则导出任务 (整合 域名 + 纯IP + 海报 + 通用发布页)
+      - name: 运行 08 号规则导出任务 (整合 域名 + 纯IP + 海报 + 发布页 + PY源码)
         env:
           PYTHONUNBUFFERED: "1"
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.export_router_rules import export_all_router_rules; sites = merge_sources(); g_doms = json.load(open('grouped_cdn_domains.json')) if os.path.exists('grouped_cdn_domains.json') else {}; pure_ips = json.load(open('extracted_ip_addresses.json')) if os.path.exists('extracted_ip_addresses.json') else []; img_doms = json.load(open('dynamic_image_domains.json')) if os.path.exists('dynamic_image_domains.json') else []; rel_doms = json.load(open('extracted_release_page_domains.json')) if os.path.exists('extracted_release_page_domains.json') else []; export_all_router_rules('.', sites, g_doms, img_doms, pure_ips, rel_doms)"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.export_router_rules import export_all_router_rules; sites = merge_sources(); g_doms = json.load(open('grouped_cdn_domains.json')) if os.path.exists('grouped_cdn_domains.json') else {}; pure_ips = json.load(open('extracted_ip_addresses.json')) if os.path.exists('extracted_ip_addresses.json') else []; img_doms = json.load(open('dynamic_image_domains.json')) if os.path.exists('dynamic_image_domains.json') else []; rel_doms = json.load(open('extracted_release_page_domains.json')) if os.path.exists('extracted_release_page_domains.json') else []; py_doms = json.load(open('extracted_py_code_domains.json')) if os.path.exists('extracted_py_code_domains.json') else []; export_all_router_rules('.', sites, g_doms, img_doms, pure_ips, rel_doms, py_doms)"
 
       - name: 自动 Push 路由器与 AdGuard 放行规则
         run: |

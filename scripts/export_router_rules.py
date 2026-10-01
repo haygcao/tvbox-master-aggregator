@@ -2,13 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本：基于 Mozilla PSL 算法的全量路由器规则导出器 (单/双/反斜杠脏数据预清洗版)
+ 独立脚本：基于 Mozilla PSL 算法的全量路由器规则导出器 (全字段融合版)
 =============================================================================
-重点更新：
-  1. 彻底清洗单斜杠/双斜杠/反斜杠转义 (\\/ -> /, \\ -> , // -> https://)；
-  2. 绝不输出 djj88\\.sbs 或 .json 这种带斜杠与文件后缀的脏数据；
-  3. 彻底绝杀 google.com, t.me 等误杀进直连的节点，100% 隔离至代理池；
-  4. 分组带备注导出 AdGuard Home、PassWall 与 Clash 规则集。
+功能：
+  1. 融合 .py 源码域名 (extract_py_code_domains)；
+  2. 融合通用发布页域名 (extract_release_page_domains)；
+  3. 融合中文 Punycode (IDNA) 与纯 IPv4 CIDR；
+  4. 执行历史增量累加 (Incremental Accumulation)；
+  5. 生成 Clash 统一规则 clash_rules_direct.yaml 与 PassWall/AdGuard 白名单。
 =============================================================================
 """
 
@@ -21,7 +22,6 @@ try:
 except ImportError:
     TLD_EXTRACTOR = None
 
-# 强行走代理的全局黑名单 (绝对不许进直连名单)
 GLOBAL_PROXY_DOMAINS = [
     "google.com", "googlesyndication.com", "googletagmanager.com",
     "google-analytics.com", "googleapis.com", "gstatic.com", "doubleclick.net",
@@ -30,7 +30,6 @@ GLOBAL_PROXY_DOMAINS = [
     "twitter.com", "x.com", "facebook.com", "instagram.com"
 ]
 
-# 无效文件后缀名黑名单 (绝不输出为域名)
 INVALID_FILE_EXTENSIONS = [
     "json", "txt", "m3u8", "ts", "js", "css", "html", "htm", "png", "jpg", "jpeg", "webp", "php"
 ]
@@ -42,12 +41,9 @@ def to_punycode_domain(dom_str):
 
 def extract_root_domain(raw_str):
     if not raw_str or not isinstance(raw_str, str): return None
-
-    # 彻底预清洗单斜杠/双斜杠/反斜杠转义
     clean_str = str(raw_str).replace('\\/', '/').replace('\\', '').split("|")[0].split("$")[0].strip()
     if clean_str.startswith("//"): clean_str = "https:" + clean_str
 
-    # 滤掉纯文件后缀
     if clean_str.lower() in INVALID_FILE_EXTENSIONS:
         return None
 
@@ -94,12 +90,15 @@ def read_existing_historical_rules(file_path):
         except Exception: pass
     return existing
 
-def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None):
-    print("  [策略导出器] 正在执行脏数据预清洗与历史增量累加导出...", flush=True)
+def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
+    print("  [策略导出器] 正在融合 .py 源码域名、发布页镜像、海报与纯 IP 导出规则...", flush=True)
 
     PROXY_KEYWORDS = ["(墙)", "墙外", "代理", "翻墙", "科学", "科学上网"]
 
     api_direct_domains = set(release_page_domains or [])
+    if py_code_domains:
+        api_direct_domains.update(py_code_domains)
+
     proxy_domains = set(GLOBAL_PROXY_DOMAINS)
 
     for s in sites:
@@ -149,7 +148,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
 
     groups = [
         ("01_门面节点_OK资源_播放CDN域名", sorted(list(top_cdn))),
-        ("02_控制面_API服务与全网发布页域名", sorted(list(api_doms))),
+        ("02_控制面_API服务_发布页与PY源码域名", sorted(list(api_doms))),
         ("03_二级_播放页与M3U8域名", sorted(list(l2_play))),
         ("04_三级_深层TS视频切片边缘CDN与历史增量域名", sorted(list(l3_ts))),
         ("05_海报图片_CDN放行域名", sorted(list(img_doms)))
@@ -160,7 +159,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 1. 导出 PassWall / SmartDNS 直连列表 (domains_direct.txt)
     with open(os.path.join(work_dir, "domains_direct.txt"), "w", encoding="utf-8") as f:
         f.write("# =========================================================\n")
-        f.write("# TVBox 视频源、发布页镜像、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
+        f.write("# TVBox 视频源、.py 源码域名、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
         f.write("# =========================================================\n\n")
         for g_title, dom_list in groups:
             if dom_list:
@@ -175,7 +174,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 2. 导出 AdGuard Home 放行白名单 (adguard_direct.txt)
     with open(os.path.join(work_dir, "adguard_direct.txt"), "w", encoding="utf-8") as f:
         f.write("! =========================================================\n")
-        f.write("! OpenWrt AdGuard Home TVBox 视频源、发布页镜像、中文 Punycode 与纯IP 放行白名单\n")
+        f.write("! OpenWrt AdGuard Home TVBox 视频源、.py 源码域名、中文 Punycode 与纯IP 放行白名单\n")
         f.write("! =========================================================\n\n")
         for g_title, dom_list in groups:
             if dom_list:
@@ -190,7 +189,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 3. 导出 Clash 规则集 (clash_rules_direct.yaml)
     with open(os.path.join(work_dir, "clash_rules_direct.yaml"), "w", encoding="utf-8") as f:
         f.write("# =========================================================\n")
-        f.write("# TVBox 视频源、发布页镜像、中文 Punycode 域名与纯 IP Clash 增量直连规则集\n")
+        f.write("# TVBox 视频源、.py 源码域名、中文 Punycode 域名与纯 IP Clash 增量直连规则集\n")
         f.write("# =========================================================\n")
         f.write("payload:\n")
         for g_title, dom_list in groups:
@@ -204,7 +203,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
                 f.write(f"  - IP-CIDR,{ip}/32\n")
 
     # 4. 导出强制代理规则列表
-    sorted_proxy = sorted(list(filter_and_expand(proxy_domains)))
+    sorted_proxy = sorted(list(expand_punycode_list(proxy_domains)))
     with open(os.path.join(work_dir, "domains_proxy.txt"), "w", encoding="utf-8") as f:
         f.write("# TVBox 强制代理域名列表\n")
         for d in sorted_proxy: f.write(f"{d}\n")
@@ -217,12 +216,12 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# TVBox 强制代理 Clash 规则集\npayload:\n")
         for d in sorted_proxy: f.write(f"  - DOMAIN-SUFFIX,{d}\n")
 
-    print(f"  ├─ 增量导出 PassWall 直连列表 (已清洗斜杠与谷歌域名): domains_direct.txt")
+    print(f"  ├─ 增量导出 PassWall 直连列表 (含 .py 源码域名): domains_direct.txt")
     print(f"  ├─ 增量导出 AdGuard Home 放行白名单: adguard_direct.txt")
     print(f"  └─ 增量导出 Clash 规则集 (支持 DOMAIN-SUFFIX, Punycode 与 IP-CIDR): clash_rules_direct.yaml")
 
-def export_all_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None):
-    return export_grouped_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains)
+def export_all_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
+    return export_grouped_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)
 
 if __name__ == "__main__":
     pass
