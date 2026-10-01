@@ -1,4 +1,4 @@
-# 2026-10-01 00:24:31
+# 2026-10-01 01:58:41
 
 💎可可影视┃4K高清
 https://gh-proxy.com/https://raw.githubusercontent.com/haygcao/tvbox-master-aggregator/main/scripts/kkys_master.py
@@ -1862,6 +1862,48 @@ https://catbox.n13.club/t4/tangdou.php
 
 [金鹰] 🐝蜻蜓┃广播
 https://catbox.n13.club/t4/qingting.php
+
+[2] 王林丨免扫
+https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/Tomorrow/refs/heads/master/JS/AppGet.js
+
+[2] 星芽｜短剧合集
+https://gitee.com/fuleishu/fulei/raw/master/json/星芽短剧.py
+
+[2] 短剧丨聚合短剧
+https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/Tomorrow/refs/heads/master/py/短剧聚合2.py
+
+[2] 爱听｜音乐歌曲
+https://gitee.com/fuleishu/fulei/raw/master/json/爱听音乐.py
+
+[2] 网络｜直播合集
+https://gitee.com/fuleishu/fulei/raw/master/json/网络直播.py
+
+[2] 哔哩｜直播合集
+https://gitee.com/fuleishu/fulei/raw/master/json/哔哩直播.py
+
+[2] 夸克┃网盘搜索
+https://so.yinpai.xyz/api.php?type=quark
+
+[2] 百度┃网盘搜索
+https://so.yinpai.xyz/api.php?type=baidu
+
+[2] UC┃网盘搜索
+https://so.yinpai.xyz/api.php?type=uc
+
+[2] 天翼┃网盘推送
+https://so.yinpai.xyz/api.php?type=tianyi
+
+[2] 阿里┃网盘搜索
+https://so.yinpai.xyz/api.php?type=aliyun
+
+[2] 123┃网盘搜索
+https://so.yinpai.xyz/api.php?type=123
+
+[2] 移动┃网盘搜索
+https://so.yinpai.xyz/api.php?type=mobile
+
+[2] 迅雷┃网盘搜索
+https://so.yinpai.xyz/api.php?type=xunlei
 
 [【8月8日】最新【影视仓】高清【1080P】高速接口地址【支持弹幕】] 接口已经更新【api.starlink.fan】
 http://124.223.214.31:16/api/lib/drpy2.min.js
