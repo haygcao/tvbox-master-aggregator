@@ -32,7 +32,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_sources.py
 
-      - name: 运行 09_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
+      - name: 运行 10_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
         env:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_iptv_split_18.py || true
@@ -47,75 +47,193 @@ jobs:
           git pull --rebase origin main || true
           git push origin HEAD:main --force
 
-  task2_resolve_domains:
+  # =========================================================================
+  # 云端多 Job 并发/并行处理阶段 (Parallel Jobs: 2, 3, 4, 5, 6 完全同时开跑)
+  # =========================================================================
+  task2_resolve_media_domains:
     needs: task1_sync_json
     if: ${{ always() && needs.task1_sync_json.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: 设置 Python 3.11 环境
         uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: 安装依赖 (含 tldextract)
-        run: pip install -r requirements.txt
-
-      - name: 深度克隆上游参考仓库至本地 repos/ 磁盘目录
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 克隆 repos 磁盘目录
         run: |
           mkdir -p repos
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
-          git clone --depth 1 https://github.com/FongMi/CatVodSpider.git repos/CatVodSpider || true
-          git clone --depth 1 https://github.com/gaotianliuyun/gao.git repos/gaotianliuyun || true
-          git clone --depth 1 https://github.com/laoma2053/awesome-zhuiju-free.git repos/laoma2053 || true
-
-      - name: 运行 03号深解析 (专干域名) + 04号纯IP + 05号海报 + 06号发布页 + 07号PY源码域名扒取
-        env:
-          PYTHONUNBUFFERED: "1"
-          FORCE_CDN_RESOLVE: "1"
+      - name: 运行 03号深解析 (专干播放域名)
+        env: { PYTHONUNBUFFERED: "1", FORCE_CDN_RESOLVE: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; from scripts.extract_image_domains import extract_all_poster_image_domains; from scripts.extract_release_page_domains import extract_all_release_page_domains; from scripts.extract_py_code_domains import extract_all_py_code_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); pure_ips = extract_ip_addresses_and_dns(sites, g_doms); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); rel_doms = extract_all_release_page_domains(); py_doms = extract_all_py_code_domains(); open('grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2)); open('extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2)); open('dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2)); open('extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2)); open('extracted_py_code_domains.json', 'w').write(json.dumps(py_doms, ensure_ascii=False, indent=2))"
-
-      - name: 自动 Push 深解析出来的 域名/IP/海报/发布页/PY源码缓存
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); open('grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2))"
+      - name: Push 播放域名缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add grouped_cdn_domains.json extracted_ip_addresses.json dynamic_image_domains.json extracted_release_page_domains.json extracted_py_code_domains.json || true
-          git diff --cached --quiet && echo "域名缓存无变更，跳过提交" && exit 0
-          git commit -m "auto: 00任务链-第二步播放域名/纯IP/海报/发布页/PY源码域名深解析完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
+          git add grouped_cdn_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-2号播放域名深解析完成"
           git pull --rebase origin main || true
           git push origin HEAD:main --force
 
-  task3_export_rules:
-    needs: task2_resolve_domains
-    if: ${{ always() && needs.task2_resolve_domains.result == 'success' }}
+  task3_extract_ips:
+    needs: task1_sync_json
+    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: 设置 Python 3.11 环境
         uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: 安装依赖 (含 tldextract)
-        run: pip install -r requirements.txt
-
-      - name: 运行 08 号规则导出任务 (整合 域名 + 纯IP + 海报 + 发布页 + PY源码)
-        env:
-          PYTHONUNBUFFERED: "1"
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 克隆 repos 磁盘目录
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.export_router_rules import export_all_router_rules; sites = merge_sources(); g_doms = json.load(open('grouped_cdn_domains.json')) if os.path.exists('grouped_cdn_domains.json') else {}; pure_ips = json.load(open('extracted_ip_addresses.json')) if os.path.exists('extracted_ip_addresses.json') else []; img_doms = json.load(open('dynamic_image_domains.json')) if os.path.exists('dynamic_image_domains.json') else []; rel_doms = json.load(open('extracted_release_page_domains.json')) if os.path.exists('extracted_release_page_domains.json') else []; py_doms = json.load(open('extracted_py_code_domains.json')) if os.path.exists('extracted_py_code_domains.json') else []; export_all_router_rules('.', sites, g_doms, img_doms, pure_ips, rel_doms, py_doms)"
+          mkdir -p repos
+          git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+      - name: 运行 04号纯IP与DNS解析 (专干IP)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; sites = merge_sources(); pure_ips = extract_ip_addresses_and_dns(sites, {}); open('extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2))"
+      - name: Push 纯IP缓存
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add extracted_ip_addresses.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-3号纯IP解析完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
 
+  task4_extract_images:
+    needs: task1_sync_json
+    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 运行 05号海报图片 CDN 扒取 (专干图片)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_image_domains import extract_all_poster_image_domains; sites = merge_sources(); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); open('dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2))"
+      - name: Push 海报图片缓存
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add dynamic_image_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-4号海报图片CDN扒取完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
+
+  task5_extract_release_pages:
+    needs: task1_sync_json
+    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 运行 06号通用发布页镜像扒取 (专干发布页)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_release_page_domains import extract_all_release_page_domains; rel_doms = extract_all_release_page_domains(); open('extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2))"
+      - name: Push 发布页缓存
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add extracted_release_page_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-5号发布页镜像扒取完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
+
+  task6_extract_py_code:
+    needs: task1_sync_json
+    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: 克隆 repos 磁盘目录
+        run: |
+          mkdir -p repos
+          git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+      - name: 运行 07号 .py 源码域名静态读取 (专干 PY 源码)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_py_code_domains import extract_all_py_code_domains; py_doms = extract_all_py_code_domains(); open('extracted_py_code_domains.json', 'w').write(json.dumps(py_doms, ensure_ascii=False, indent=2))"
+      - name: Push PY 源码域名缓存
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add extracted_py_code_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-6号PY源码域名读取完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
+
+  # =========================================================================
+  # Task 7: 4 大 DNS 交叉投票独立校验 (等待 Task 2,3,4,5,6 并行跑完后执行)
+  # =========================================================================
+  task7_verify_dns:
+    needs: [task2_resolve_media_domains, task3_extract_ips, task4_extract_images, task5_extract_release_pages, task6_extract_py_code]
+    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 拉取最新缓存
+        run: git pull --rebase origin main || true
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 运行 08号 4 大 DNS 交叉投票独立校验 (专干 DNS 校验)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: python3 scripts/verify_domestic_dns.py
+      - name: Push DNS 校验结果
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add verified_direct_domains.json verified_proxy_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-7号 DNS 交叉投票校验完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
+
+  # =========================================================================
+  # Task 8: 规则格式化统一导出 (等待 Task 7 校验完成后 0.1 秒纯内存写盘导出)
+  # =========================================================================
+  task8_export_rules:
+    needs: task7_verify_dns
+    if: ${{ always() && needs.task7_verify_dns.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 拉取最新校验缓存
+        run: git pull --rebase origin main || true
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: 'pip' }
+      - run: pip install -r requirements.txt
+      - name: 运行 09 号规则导出任务 (专干 0.1s 纯格式化导出)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.export_router_rules import export_all_router_rules; sites = merge_sources(); export_all_router_rules('.', sites, {})"
       - name: 自动 Push 路由器与 AdGuard 放行规则
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git add domains_direct.txt domains_proxy.txt clash_rules_direct.yaml clash_rules_proxy.yaml adguard_direct.txt adguard_proxy.txt || true
           git diff --cached --quiet && echo "规则无变更，跳过提交" && exit 0
-          git commit -m "auto: 00任务链-第三步 AdGuard/PassWall/Clash 规则导出完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
+          git commit -m "auto: 00任务链-8号 AdGuard/PassWall/Clash 规则格式化导出完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
           git pull --rebase origin main || true
           git push origin HEAD:main --force

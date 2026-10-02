@@ -4,7 +4,7 @@
 =============================================================================
  TVBox 主任务入口管道 (Pipeline Orchestrator)
 =============================================================================
-按顺序串联 9 个独立的单职责 Python 任务脚本：
+按顺序串联 10 个独立的单职责 Python 任务脚本：
   01. scripts/merge_sources.py                     : 资源抓取与合并
   02. scripts/analyze_potential_duplicates.py       : 潜在重复资源日志分析
   03. scripts/resolve_deep_cdn.py                   : 多层级 Stage 5 物理播放域名探测 (专干域名)
@@ -12,8 +12,9 @@
   05. scripts/extract_image_domains.py            : 动态海报图片 CDN 域名扒取 (专干图片)
   06. scripts/extract_release_page_domains.py       : 通用发布页镜像与 Punycode 动态扒取 (专干发布页)
   07. scripts/extract_py_code_domains.py            : .py 爬虫源码内部域名静态提取 (专干 PY 源码)
-  08. scripts/export_router_rules.py                : 路由器与 AdGuard 放行规则导出
-  09. scripts/merge_iptv_split_18.py                : 美英学英语 IPTV 整合与 not_suitable/ 隔离
+  08. scripts/verify_domestic_dns.py               : 3 大国内 DNS + Cloudflare 交叉投票校验 (专干 DNS 校验)
+  09. scripts/export_router_rules.py                : 路由器与 AdGuard 放行规则导出 (专干 0.1s 纯格式化导出)
+  10. scripts/merge_iptv_split_18.py                : 美英学英语 IPTV 整合与 not_suitable/ 隔离
 =============================================================================
 """
 
@@ -30,8 +31,9 @@ from scripts import extract_ip_addresses as step4
 from scripts import extract_image_domains as step5
 from scripts import extract_release_page_domains as step6
 from scripts import extract_py_code_domains as step7
-from scripts import export_router_rules as step8
-from scripts import merge_iptv_split_18 as step9
+from scripts import verify_domestic_dns as step8
+from scripts import export_router_rules as step9
+from scripts import merge_iptv_split_18 as step10
 
 def main():
     ts = time.strftime('%Y-%m-%d %H:%M:%S')
@@ -59,11 +61,14 @@ def main():
     # 7. 运行独立任务七：.py 爬虫源码内部域名静态提取 (专干 PY 源码)
     py_code_domains = step7.extract_all_py_code_domains()
 
-    # 8. 运行独立任务八：策略导出 (AdGuard / PassWall / Clash)
-    step8.export_all_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)
+    # 8. 运行独立任务八：3 大国内 DNS + Cloudflare 交叉投票校验 (专干 DNS 校验)
+    step8.process_dns_verification()
 
-    # 9. 运行独立任务九：美英学英语 IPTV 整合与 not_suitable/ 隔离导出
-    step9.process_iptv_and_split_18()
+    # 9. 运行独立任务九：策略导出 (AdGuard / PassWall / Clash)
+    step9.export_all_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)
+
+    # 10. 运行独立任务十：美英学英语 IPTV 整合与 not_suitable/ 隔离导出
+    step10.process_iptv_and_split_18()
 
     print(f"\n[{time.strftime('%Y-%m-%d %H:%M:%S')}] ===== TVBox 模块化管道更新全部成功完成! =====")
 
