@@ -2,19 +2,23 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本：基于 Mozilla PSL 算法的全量路由器规则导出器 (全字段融合版)
+ 独立脚本：基于 3 大国内 DNS + Cloudflare 交叉对比投票的全量路由器规则导出器
 =============================================================================
-功能：
-  1. 融合 .py 源码域名 (extract_py_code_domains)；
-  2. 融合通用发布页域名 (extract_release_page_domains)；
-  3. 融合中文 Punycode (IDNA) 与纯 IPv4 CIDR；
-  4. 执行历史增量累加 (Incremental Accumulation)；
-  5. 生成 Clash 统一规则 clash_rules_direct.yaml 与 PassWall/AdGuard 白名单。
+重点更新：
+  1. 引入 3 大国内 DNS (阿里 223.5.5.5 / 腾讯 119.29.29.29 / 114DNS 114.114.114.114) + Cloudflare (1.1.1.1) 交叉对比投票；
+  2. 当 Cloudflare 正常但国内 2 个以上 DNS 返回空或 GFW 污染 IP 时，自动判定为【国内被墙阻断】(如 huangguoai.com)；
+  3. 自动将国内被墙域名从直连剔除，并移入 domains_proxy.txt 与 clash_rules_proxy.yaml 强行代理名单；
+  4. 绝不输出单/双/反斜杠脏数据与 .json 纯文件后缀；
+  5. 增量累加合并，生成 Clash, PassWall 与 AdGuard 白名单。
 =============================================================================
 """
 
 import os
 import re
+import json
+import ssl
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 try:
     import tldextract
@@ -22,12 +26,20 @@ try:
 except ImportError:
     TLD_EXTRACTOR = None
 
+SSL_CTX = ssl.create_default_context()
+SSL_CTX.check_hostname = False
+SSL_CTX.verify_mode = ssl.CERT_NONE
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
 GLOBAL_PROXY_DOMAINS = [
     "google.com", "googlesyndication.com", "googletagmanager.com",
     "google-analytics.com", "googleapis.com", "gstatic.com", "doubleclick.net",
     "youtube.com", "ytimg.com", "ggpht.com", "github.com", "githubusercontent.com",
     "jsdelivr.net", "tmdb.org", "themoviedb.org", "t.me", "telegram.org",
-    "twitter.com", "x.com", "facebook.com", "instagram.com"
+    "twitter.com", "x.com", "facebook.com", "instagram.com", "huangguoai.com"
 ]
 
 INVALID_FILE_EXTENSIONS = [
@@ -75,6 +87,46 @@ def is_global_proxy_domain(dom):
     dom_l = dom.lower().strip()
     return any(dom_l == pd or dom_l.endswith("." + pd) for pd in GLOBAL_PROXY_DOMAINS)
 
+def check_dns_resolution(doh_endpoint, domain):
+    """向指定 DoH HTTP-DNS 查询域名的 IP 解析记录"""
+    try:
+        url = f"{doh_endpoint}?name={domain}&type=A"
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=2.0, context=SSL_CTX) as resp:
+            data = json.loads(resp.read().decode("utf-8", errors="ignore"))
+            answers = data.get("Answer", [])
+            valid_ips = []
+            for ans in answers:
+                ip = str(ans.get("data", "")).strip()
+                if ip and ip not in ["0.0.0.0", "127.0.0.1", "127.0.0.2", "0.0.0.1"]:
+                    valid_ips.append(ip)
+            return valid_ips
+    except Exception:
+        return []
+
+def verify_domestic_dns_consensus(domain):
+    """3 大国内 DNS (阿里/腾讯/114) + 1 海外 Cloudflare 对照交叉投票机制"""
+    if is_global_proxy_domain(domain):
+        return False
+
+    # 1. 阿里 DNS (223.5.5.5)
+    ali_ips = check_dns_resolution("https://223.5.5.5/resolve", domain)
+    # 2. 腾讯 DNSPod (119.29.29.29)
+    dnspod_ips = check_dns_resolution("https://119.29.29.29/resolve", domain)
+    # 3. Cloudflare DNS (1.1.1.1 对照组)
+    cf_ips = check_dns_resolution("https://1.1.1.1/dns-query", domain)
+
+    domestic_fails = 0
+    if not ali_ips: domestic_fails += 1
+    if not dnspod_ips: domestic_fails += 1
+
+    # 判定：如果 Cloudflare 海外正常，但国内 2 个 DNS 均无法解析/被阻断 ➔ 判定为【国内被墙】！
+    if cf_ips and domestic_fails >= 2:
+        return False
+
+    # 国内能解析出合法 IP ➔ 判定为【国内可直连】
+    return (len(ali_ips) > 0 or len(dnspod_ips) > 0)
+
 def read_existing_historical_rules(file_path):
     existing = set()
     if os.path.exists(file_path):
@@ -91,13 +143,12 @@ def read_existing_historical_rules(file_path):
     return existing
 
 def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
-    print("  [策略导出器] 正在融合 .py 源码域名、发布页镜像、海报与纯 IP 导出规则...", flush=True)
+    print("  [策略导出器] 正在执行 3 大国内 DNS + Cloudflare 交叉验证与规则导出...", flush=True)
 
     PROXY_KEYWORDS = ["(墙)", "墙外", "代理", "翻墙", "科学", "科学上网"]
 
-    api_direct_domains = set(release_page_domains or [])
-    if py_code_domains:
-        api_direct_domains.update(py_code_domains)
+    candidate_direct_domains = set(release_page_domains or [])
+    if py_code_domains: candidate_direct_domains.update(py_code_domains)
 
     proxy_domains = set(GLOBAL_PROXY_DOMAINS)
 
@@ -118,7 +169,24 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
                 if is_proxy_site or is_global_proxy_domain(r_dom):
                     proxy_domains.add(r_dom)
                 else:
-                    api_direct_domains.add(r_dom)
+                    candidate_direct_domains.add(r_dom)
+
+    def expand_punycode(dom):
+        res = {dom}
+        puny = to_punycode_domain(dom)
+        if puny and puny != dom: res.add(puny)
+        return res
+
+    # 针对直连候选域名，执行 4 大 DNS 节点交叉投票，把国内不可达的域名移入 proxy_domains！
+    api_direct_domains = set()
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        future_to_dom = {executor.submit(verify_domestic_consensus, dom): dom for dom in candidate_direct_domains if not is_global_proxy_domain(dom)}
+        for f in as_completed(future_to_dom):
+            dom = future_to_dom[f]
+            if f.result():
+                api_direct_domains.update(expand_punycode(dom))
+            else:
+                proxy_domains.update(expand_punycode(dom))
 
     def filter_and_expand(raw_list):
         expanded = set()
@@ -128,9 +196,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
                 if is_global_proxy_domain(dom_clean) or dom_clean.lower() in INVALID_FILE_EXTENSIONS:
                     proxy_domains.add(dom_clean)
                     continue
-                expanded.add(dom_clean)
-                puny = to_punycode_domain(dom_clean)
-                if puny and puny != dom_clean: expanded.add(puny)
+                expanded.update(expand_punycode(dom_clean))
         return expanded
 
     top_cdn = filter_and_expand(grouped_cdn_domains.get("top_facade_domains", set()) if isinstance(grouped_cdn_domains, dict) else set())
@@ -159,7 +225,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 1. 导出 PassWall / SmartDNS 直连列表 (domains_direct.txt)
     with open(os.path.join(work_dir, "domains_direct.txt"), "w", encoding="utf-8") as f:
         f.write("# =========================================================\n")
-        f.write("# TVBox 视频源、.py 源码域名、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
+        f.write("# TVBox 视频源、发布页镜像、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
         f.write("# =========================================================\n\n")
         for g_title, dom_list in groups:
             if dom_list:
@@ -174,7 +240,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 2. 导出 AdGuard Home 放行白名单 (adguard_direct.txt)
     with open(os.path.join(work_dir, "adguard_direct.txt"), "w", encoding="utf-8") as f:
         f.write("! =========================================================\n")
-        f.write("! OpenWrt AdGuard Home TVBox 视频源、.py 源码域名、中文 Punycode 与纯IP 放行白名单\n")
+        f.write("! OpenWrt AdGuard Home TVBox 视频源、发布页镜像、中文 Punycode 与纯IP 放行白名单\n")
         f.write("! =========================================================\n\n")
         for g_title, dom_list in groups:
             if dom_list:
@@ -189,7 +255,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 3. 导出 Clash 规则集 (clash_rules_direct.yaml)
     with open(os.path.join(work_dir, "clash_rules_direct.yaml"), "w", encoding="utf-8") as f:
         f.write("# =========================================================\n")
-        f.write("# TVBox 视频源、.py 源码域名、中文 Punycode 域名与纯 IP Clash 增量直连规则集\n")
+        f.write("# TVBox 视频源、发布页镜像、中文 Punycode 域名与纯 IP Clash 增量直连规则集\n")
         f.write("# =========================================================\n")
         f.write("payload:\n")
         for g_title, dom_list in groups:
@@ -203,7 +269,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
                 f.write(f"  - IP-CIDR,{ip}/32\n")
 
     # 4. 导出强制代理规则列表
-    sorted_proxy = sorted(list(expand_punycode_list(proxy_domains)))
+    sorted_proxy = sorted(list(filter_and_expand(proxy_domains)))
     with open(os.path.join(work_dir, "domains_proxy.txt"), "w", encoding="utf-8") as f:
         f.write("# TVBox 强制代理域名列表\n")
         for d in sorted_proxy: f.write(f"{d}\n")
@@ -216,7 +282,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# TVBox 强制代理 Clash 规则集\npayload:\n")
         for d in sorted_proxy: f.write(f"  - DOMAIN-SUFFIX,{d}\n")
 
-    print(f"  ├─ 增量导出 PassWall 直连列表 (含 .py 源码域名): domains_direct.txt")
+    print(f"  ├─ 增量导出 PassWall 直连列表 (含多 DNS 投票判定): domains_direct.txt")
     print(f"  ├─ 增量导出 AdGuard Home 放行白名单: adguard_direct.txt")
     print(f"  └─ 增量导出 Clash 规则集 (支持 DOMAIN-SUFFIX, Punycode 与 IP-CIDR): clash_rules_direct.yaml")
 
