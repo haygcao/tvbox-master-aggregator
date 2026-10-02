@@ -70,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,cloudfront.net
   - DOMAIN-SUFFIX,cmxzettb.com
   - DOMAIN-SUFFIX,cranemarsh.com
+  - DOMAIN-SUFFIX,csdnimg.cn
   - DOMAIN-SUFFIX,cyepzjnb.com
   - DOMAIN-SUFFIX,cyscyy.com
   - DOMAIN-SUFFIX,dbokutv.com
@@ -172,6 +173,7 @@ payload:
   - DOMAIN-SUFFIX,kkys14.com
   - DOMAIN-SUFFIX,kkys15.com
   - DOMAIN-SUFFIX,kkys20.com
+  - DOMAIN-SUFFIX,knvod.com
   - DOMAIN-SUFFIX,ksse.cn
   - DOMAIN-SUFFIX,kstore.dev
   - DOMAIN-SUFFIX,kuaichezy.org
@@ -242,7 +244,6 @@ payload:
   - DOMAIN-SUFFIX,rmedphk.com
   - DOMAIN-SUFFIX,rstu6.com
   - DOMAIN-SUFFIX,rstuuv.com
-  - DOMAIN-SUFFIX,ry-pic.com
   - DOMAIN-SUFFIX,rycjapi.com
   - DOMAIN-SUFFIX,ryiplay18.com
   - DOMAIN-SUFFIX,ryiplay21.com
@@ -291,6 +292,7 @@ payload:
   - DOMAIN-SUFFIX,w32z7vtd.com
   - DOMAIN-SUFFIX,waigpt.com
   - DOMAIN-SUFFIX,wanmeikk.film
+  - DOMAIN-SUFFIX,wbbb1.com
   - DOMAIN-SUFFIX,wckk799.vip
   - DOMAIN-SUFFIX,wckz813.vip
   - DOMAIN-SUFFIX,wcyfhknomg.work
@@ -346,7 +348,6 @@ payload:
   - DOMAIN-SUFFIX,yongfan99\.com
   - DOMAIN-SUFFIX,youliao88.com
   - DOMAIN-SUFFIX,youtube.com
-  - DOMAIN-SUFFIX,ys2046.lat
   - DOMAIN-SUFFIX,ytimg.com
   - DOMAIN-SUFFIX,yuytyr.online
   - DOMAIN-SUFFIX,yxdesign.art
