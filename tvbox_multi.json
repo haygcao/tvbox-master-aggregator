@@ -465,6 +465,22 @@
       "url": "https://www.252035.xyz/z/FongMi.json"
     },
     {
+      "name": "qist_js",
+      "url": "https://raw.githubusercontent.com/qist/tvbox/main/js.json"
+    },
+    {
+      "name": "qist_367",
+      "url": "https://raw.githubusercontent.com/qist/tvbox/main/367.json"
+    },
+    {
+      "name": "qist_dianshi",
+      "url": "https://raw.githubusercontent.com/qist/tvbox/main/dianshi.json"
+    },
+    {
+      "name": "qist_xyq",
+      "url": "https://raw.githubusercontent.com/qist/tvbox/main/XYQ.json"
+    },
+    {
       "name": "youhun",
       "url": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/index.json"
     },
@@ -517,10 +533,6 @@
       "url": "https://dxawi.github.io/0/0.json"
     },
     {
-      "name": "mymine",
-      "url": "https://raw.githubusercontent.com/mymine/CatVodSpider/main/json/config.json"
-    },
-    {
       "name": "cluntop",
       "url": "https://raw.githubusercontent.com/cluntop/tvbox/main/tvbox.json"
     },
@@ -535,10 +547,6 @@
     {
       "name": "jingyi251",
       "url": "https://raw.githubusercontent.com/jingyi251/a/main/a.json"
-    },
-    {
-      "name": "jie20091116",
-      "url": "https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/config.json"
     },
     {
       "name": "laoma2053",
@@ -1011,6 +1019,22 @@
       "sourceUrl": "https://www.252035.xyz/z/FongMi.json"
     },
     {
+      "sourceName": "qist_js",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/js.json"
+    },
+    {
+      "sourceName": "qist_367",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/367.json"
+    },
+    {
+      "sourceName": "qist_dianshi",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/dianshi.json"
+    },
+    {
+      "sourceName": "qist_xyq",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/XYQ.json"
+    },
+    {
       "sourceName": "youhun",
       "sourceUrl": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/index.json"
     },
@@ -1063,10 +1087,6 @@
       "sourceUrl": "https://dxawi.github.io/0/0.json"
     },
     {
-      "sourceName": "mymine",
-      "sourceUrl": "https://raw.githubusercontent.com/mymine/CatVodSpider/main/json/config.json"
-    },
-    {
       "sourceName": "cluntop",
       "sourceUrl": "https://raw.githubusercontent.com/cluntop/tvbox/main/tvbox.json"
     },
@@ -1081,10 +1101,6 @@
     {
       "sourceName": "jingyi251",
       "sourceUrl": "https://raw.githubusercontent.com/jingyi251/a/main/a.json"
-    },
-    {
-      "sourceName": "jie20091116",
-      "sourceUrl": "https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/config.json"
     },
     {
       "sourceName": "laoma2053",
@@ -1557,6 +1573,22 @@
       "sourceUrl": "https://www.252035.xyz/z/FongMi.json"
     },
     {
+      "sourceName": "qist_js",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/js.json"
+    },
+    {
+      "sourceName": "qist_367",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/367.json"
+    },
+    {
+      "sourceName": "qist_dianshi",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/dianshi.json"
+    },
+    {
+      "sourceName": "qist_xyq",
+      "sourceUrl": "https://raw.githubusercontent.com/qist/tvbox/main/XYQ.json"
+    },
+    {
       "sourceName": "youhun",
       "sourceUrl": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/index.json"
     },
@@ -1609,10 +1641,6 @@
       "sourceUrl": "https://dxawi.github.io/0/0.json"
     },
     {
-      "sourceName": "mymine",
-      "sourceUrl": "https://raw.githubusercontent.com/mymine/CatVodSpider/main/json/config.json"
-    },
-    {
       "sourceName": "cluntop",
       "sourceUrl": "https://raw.githubusercontent.com/cluntop/tvbox/main/tvbox.json"
     },
@@ -1627,10 +1655,6 @@
     {
       "sourceName": "jingyi251",
       "sourceUrl": "https://raw.githubusercontent.com/jingyi251/a/main/a.json"
-    },
-    {
-      "sourceName": "jie20091116",
-      "sourceUrl": "https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/config.json"
     },
     {
       "sourceName": "laoma2053",

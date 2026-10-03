@@ -1,4 +1,4 @@
-# 2026-10-03 11:13:53
+# 2026-10-03 20:41:27
 
 💎可可影视┃4K高清
 https://gh-proxy.com/https://raw.githubusercontent.com/haygcao/tvbox-master-aggregator/main/scripts/kkys_master.py
@@ -21,1727 +21,1886 @@ https://suoniapi.com/api.php/provide/vod/?ac=list
 ⚡极速┃云播
 https://jszyapi.com/api.php/provide/vod/
 
-💎58影视┃[PY]
+💎py_qie┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_qie.py
+
+💎py_yytv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_yytv.py
+
+💎py_jrskbs┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_jrskbs.py
+
+💎py_ysdq┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_ysdq.py
+
+💎czspp2┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/czspp2.py
+
+💎py_yszx┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_yszx.py
+
+💎pylibvio┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/pylibvio.py
+
+💎qie┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qie.py
+
+💎pydouyu┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/pydouyu.py
+
+💎cctv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/cctv.py
+
+💎py_xigua┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_xigua.py
+
+💎py_cctv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cctv.py
+
+💎py_xigua┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_xigua.py
+
+💎py_cctv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cctv.py
+
+💎py_huya┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_huya.py
+
+💎py_douyu┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_douyu.py
+
+💎py_star┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_star.py
+
+💎py_bdys┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_bdys.py
+
+💎py_gitcafe┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_gitcafe.py
+
+💎py_cup┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cup.py
+
+💎py_gimytv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_gimytv.py
+
+💎py_voflix┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_voflix.py
+
+💎py_bilibili┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_bilibili.py
+
+💎py_zhaozy┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_zhaozy.py
+
+💎py_lezhu┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_lezhu.py
+
+💎py_zxzj┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_zxzj.py
+
+💎py_bilimd┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_bilimd.py
+
+💎py_yiso┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_yiso.py
+
+💎py_3qu┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_3qu.py
+
+💎py_ali┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_ali.py
+
+💎py_alist┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_alist.py
+
+💎py_cokemv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cokemv.py
+
+💎py_cctv┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cctv.py
+
+💎py_pansou┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_pansou.py
+
+💎py_wmkk┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_wmkk.py
+
+💎py_czspp┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_czspp.py
+
+💎py_bilivd┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_bilivd.py
+
+💎py_小纸条┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_小纸条.py
+
+💎py_kuaikan┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_kuaikan.py
+
+💎py_xmaomi┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_xmaomi.py
+
+💎py_cyys┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_cyys.py
+
+💎py_genmov┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_genmov.py
+
+💎58影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/58影视.py
 
-💎heiliaobudayang┃[PY]
+💎heiliaobudayang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/heiliaobudayang.py
 
-💎星影4K┃[PY]
+💎星影4K┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/星影4K.py
 
-💎儿歌乐园┃[PY]
+💎儿歌乐园┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/儿歌乐园.py
 
-💎4KVM┃[PY]
+💎4KVM┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4KVM.py
 
-💎hanjubashi┃[PY]
+💎hanjubashi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hanjubashi.py
 
-💎luolidaoxf┃[PY]
+💎luolidaoxf┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luolidaoxf.py
 
-💎Pandalive┃[PY]
+💎Pandalive┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Pandalive.py
 
-💎日久生情┃[PY]
+💎日久生情┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/日久生情.py
 
-💎海马影视┃[PY]
+💎海马影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/海马影视.py
 
-💎kuwoyinyue┃[PY]
+💎kuwoyinyue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kuwoyinyue.py
 
-💎haojuwu┃[PY]
+💎haojuwu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/haojuwu.py
 
-💎枫叶影院┃[PY]
+💎枫叶影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/枫叶影院.py
 
-💎茶杯狐[影]┃[PY]
+💎茶杯狐[影]┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/茶杯狐[影].py
 
-💎chabeihu┃[PY]
+💎chabeihu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/chabeihu.py
 
-💎NaughtyMachinimadongman┃[PY]
+💎NaughtyMachinimadongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/NaughtyMachinimadongman.py
 
-💎py_jieyingshi┃[PY]
+💎py_jieyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_jieyingshi.py
 
-💎AI漫剧┃[PY]
+💎AI漫剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/AI漫剧.py
 
-💎madoushe┃[PY]
+💎madoushe┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/madoushe.py
 
-💎4Kyingshi┃[PY]
+💎4Kyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4Kyingshi.py
 
-💎youliao┃[PY]
+💎youliao┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youliao.py
 
-💎共青春┃[PY]
+💎共青春┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/共青春.py
 
-💎lmlgdjr┃[PY]
+💎lmlgdjr┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/lmlgdjr.py
 
-💎kekeyingshi┃[PY]
+💎kekeyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kekeyingshi.py
 
-💎毒蛇┃[PY]
+💎毒蛇┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/毒蛇.py
 
-💎LREEOK┃[PY]
+💎LREEOK┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/LREEOK.py
 
-💎one┃[PY]
+💎one┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/one.py
 
-💎youguan┃[PY]
+💎youguan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youguan.py
 
-💎猎手影视┃[PY]
+💎猎手影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/猎手影视.py
 
-💎好帅短剧┃[PY]
+💎好帅短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/好帅短剧.py
 
-💎男同网┃[PY]
+💎男同网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/男同网.py
 
-💎啊哈DJ网┃[PY]
+💎啊哈DJ网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/啊哈DJ网.py
 
-💎6080xinshijue┃[PY]
+💎6080xinshijue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/6080xinshijue.py
 
-💎盘友圈┃[PY]
+💎盘友圈┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/盘友圈.py
 
-💎4K影视┃[PY]
+💎4K影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4K影视.py
 
-💎yinshuidong┃[PY]
+💎yinshuidong┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinshuidong.py
 
-💎huangdouduanju┃[PY]
+💎huangdouduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huangdouduanju.py
 
-💎qimaoyingshi┃[PY]
+💎qimaoyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qimaoyingshi.py
 
-💎麦田影院┃[PY]
+💎麦田影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/麦田影院.py
 
-💎影视天堂┃[PY]
+💎影视天堂┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/影视天堂.py
 
-💎baopianku┃[PY]
+💎baopianku┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baopianku.py
 
-💎muyechachacha┃[PY]
+💎muyechachacha┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/muyechachacha.py
 
-💎hanime1┃[PY]
+💎hanime1┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hanime1.py
 
-💎自动加载┃[PY]
+💎自动加载┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动加载.py
 
-💎naifeigongchang┃[PY]
+💎naifeigongchang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/naifeigongchang.py
 
-💎58yingshi┃[PY]
+💎58yingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/58yingshi.py
 
-💎youguanzhibo┃[PY]
+💎youguanzhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youguanzhibo.py
 
-💎DJGEM音乐网┃[PY]
+💎DJGEM音乐网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DJGEM音乐网.py
 
-💎juokxf┃[PY]
+💎juokxf┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/juokxf.py
 
-💎Teng┃[PY]
+💎Teng┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Teng.py
 
-💎haohaokan┃[PY]
+💎haohaokan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/haohaokan.py
 
-💎云朵影视┃[PY]
+💎云朵影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/云朵影视.py
 
-💎bajieyingshi┃[PY]
+💎bajieyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bajieyingshi.py
 
-💎大众┃[PY]
+💎大众┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/大众.py
 
-💎剧OK┃[PY]
+💎剧OK┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧OK.py
 
-💎FoFoyingyuan┃[PY]
+💎FoFoyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/FoFoyingyuan.py
 
-💎悟空影院┃[PY]
+💎悟空影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/悟空影院.py
 
-💎推特APP┃[PY]
+💎推特APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/推特APP.py
 
-💎河马剧场┃[PY]
+💎河马剧场┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/河马剧场.py
 
-💎sszzyy┃[PY]
+💎sszzyy┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/sszzyy.py
 
-💎dusheyingshi┃[PY]
+💎dusheyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dusheyingshi.py
 
-💎星河影视┃[PY]
+💎星河影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/星河影视.py
 
-💎爱看短剧┃[PY]
+💎爱看短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱看短剧.py
 
-💎hemajuchang┃[PY]
+💎hemajuchang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hemajuchang.py
 
-💎EcoHub影视┃[PY]
+💎EcoHub影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/EcoHub影视.py
 
-💎七星短剧┃[PY]
+💎七星短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/七星短剧.py
 
-💎海角┃[PY]
+💎海角┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/海角.py
 
-💎yunduo┃[PY]
+💎yunduo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yunduo.py
 
-💎gaoduanshipin┃[PY]
+💎gaoduanshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gaoduanshipin.py
 
-💎yinmuyuanwei┃[PY]
+💎yinmuyuanwei┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinmuyuanwei.py
 
-💎luanluncangku┃[PY]
+💎luanluncangku┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luanluncangku.py
 
-💎51dasai┃[PY]
+💎51dasai┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51dasai.py
 
-💎泡泡屋┃[PY]
+💎泡泡屋┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/泡泡屋.py
 
-💎fangzhong_shu┃[PY]
+💎fangzhong_shu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fangzhong_shu.py
 
-💎juxiafan4K┃[PY]
+💎juxiafan4K┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/juxiafan4K.py
 
-💎get_iptv┃[PY]
+💎get_iptv┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/get_iptv.py
 
-💎片库┃[PY]
+💎片库┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/片库.py
 
-💎豌豆PRO┃[PY]
+💎豌豆PRO┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/豌豆PRO.py
 
-💎nongminyingshi┃[PY]
+💎nongminyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/nongminyingshi.py
 
-💎Xhm┃[PY]
+💎Xhm┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Xhm.py
 
-💎偷乐短剧┃[PY]
+💎偷乐短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/偷乐短剧.py
 
-💎dianyingxia┃[PY]
+💎dianyingxia┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dianyingxia.py
 
-💎maoyouyingshi┃[PY]
+💎maoyouyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/maoyouyingshi.py
 
-💎kemono┃[PY]
+💎kemono┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kemono.py
 
-💎fulao2┃[PY]
+💎fulao2┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fulao2.py
 
-💎欧美影┃[PY]
+💎欧美影┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/欧美影.py
 
-💎kenanyingshi┃[PY]
+💎kenanyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kenanyingshi.py
 
-💎saonvdanganguan┃[PY]
+💎saonvdanganguan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/saonvdanganguan.py
 
-💎30jujiwang┃[PY]
+💎30jujiwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/30jujiwang.py
 
-💎腾讯视频┃[PY]
+💎腾讯视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/腾讯视频.py
 
-💎嗷呜动漫┃[PY]
+💎嗷呜动漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/嗷呜动漫.py
 
-💎fengyeyinyue┃[PY]
+💎fengyeyinyue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fengyeyinyue.py
 
-💎漫剧影院┃[PY]
+💎漫剧影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/漫剧影院.py
 
-💎小红影视┃[PY]
+💎小红影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小红影视.py
 
-💎GG51┃[PY]
+💎GG51┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/GG51.py
 
-💎qingwashipin┃[PY]
+💎qingwashipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingwashipin.py
 
-💎quanseshipin┃[PY]
+💎quanseshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/quanseshipin.py
 
-💎9g88x┃[PY]
+💎9g88x┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/9g88x.py
 
-💎jingyingtuji┃[PY]
+💎jingyingtuji┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jingyingtuji.py
 
-💎猫又影视┃[PY]
+💎猫又影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/猫又影视.py
 
-💎金牌APP┃[PY]
+💎金牌APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/金牌APP.py
 
-💎damahou┃[PY]
+💎damahou┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/damahou.py
 
-💎baoguawang┃[PY]
+💎baoguawang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baoguawang.py
 
-💎qipaoshipin┃[PY]
+💎qipaoshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qipaoshipin.py
 
-💎火车影视┃[PY]
+💎火车影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/火车影视.py
 
-💎caoliushipinqu┃[PY]
+💎caoliushipinqu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caoliushipinqu.py
 
-💎luanlunyidianyuan┃[PY]
+💎luanlunyidianyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luanlunyidianyuan.py
 
-💎ddmf┃[PY]
+💎ddmf┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ddmf.py
 
-💎Applzxw┃[PY]
+💎Applzxw┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Applzxw.py
 
-💎星芽短剧┃[PY]
+💎星芽短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/星芽短剧.py
 
-💎皮皮虾┃[PY]
+💎皮皮虾┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/皮皮虾.py
 
-💎dsystv┃[PY]
+💎dsystv┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dsystv.py
 
-💎韩小圈┃[PY]
+💎韩小圈┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/韩小圈.py
 
-💎小红薯APP┃[PY]
+💎小红薯APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小红薯APP.py
 
-💎zhizhewanshui┃[PY]
+💎zhizhewanshui┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhizhewanshui.py
 
-💎yingzhikongdongman┃[PY]
+💎yingzhikongdongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yingzhikongdongman.py
 
-💎yymp3┃[PY]
+💎yymp3┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yymp3.py
 
-💎dantaTV┃[PY]
+💎dantaTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dantaTV.py
 
-💎caijijuhe┃[PY]
+💎caijijuhe┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caijijuhe.py
 
-💎球球┃[PY]
+💎球球┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/球球.py
 
-💎多瑙影院┃[PY]
+💎多瑙影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/多瑙影院.py
 
-💎luyitian┃[PY]
+💎luyitian┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luyitian.py
 
-💎饭团影视┃[PY]
+💎饭团影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/饭团影视.py
 
-💎嗨皮影视┃[PY]
+💎嗨皮影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/嗨皮影视.py
 
-💎熊猫秒播┃[PY]
+💎熊猫秒播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/熊猫秒播.py
 
-💎yingshidaquan┃[PY]
+💎yingshidaquan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yingshidaquan.py
 
-💎yingziyinyue┃[PY]
+💎yingziyinyue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yingziyinyue.py
 
-💎dajiba┃[PY]
+💎dajiba┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dajiba.py
 
-💎糖豆┃[PY]
+💎糖豆┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/糖豆.py
 
-💎红果┃[PY]
+💎红果┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/红果.py
 
-💎myfreecamszhibo┃[PY]
+💎myfreecamszhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/myfreecamszhibo.py
 
-💎达达兔┃[PY]
+💎达达兔┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/达达兔.py
 
-💎八零八┃[PY]
+💎八零八┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/八零八.py
 
-💎夜夜春梦┃[PY]
+💎夜夜春梦┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/夜夜春梦.py
 
-💎51吸瓜动态版┃[PY]
+💎51吸瓜动态版┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51吸瓜动态版.py
 
-💎Mang┃[PY]
+💎Mang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Mang.py
 
-💎catemby┃[PY]
+💎catemby┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/catemby.py
 
-💎悦听吧┃[PY]
+💎悦听吧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/悦听吧.py
 
-💎like┃[PY]
+💎like┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/like.py
 
-💎抖音┃[PY]
+💎抖音┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/抖音.py
 
-💎yingxiangxingqiu┃[PY]
+💎yingxiangxingqiu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yingxiangxingqiu.py
 
-💎actor┃[PY]
+💎actor┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/actor.py
 
-💎luwangbaodian┃[PY]
+💎luwangbaodian┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luwangbaodian.py
 
-💎魔方影视┃[PY]
+💎魔方影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/魔方影视.py
 
-💎duoduoyingshi┃[PY]
+💎duoduoyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duoduoyingshi.py
 
-💎简云┃[PY]
+💎简云┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/简云.py
 
-💎yinyangbaojian┃[PY]
+💎yinyangbaojian┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinyangbaojian.py
 
-💎fulleroticmovies┃[PY]
+💎fulleroticmovies┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fulleroticmovies.py
 
-💎今日看料┃[PY]
+💎今日看料┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/今日看料.py
 
-💎youkushipin1┃[PY]
+💎youkushipin1┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youkushipin1.py
 
-💎jiaoshou┃[PY]
+💎jiaoshou┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jiaoshou.py
 
-💎ytbzb┃[PY]
+💎ytbzb┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ytbzb.py
 
-💎luanlun48xiaoshi┃[PY]
+💎luanlun48xiaoshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luanlun48xiaoshi.py
 
-💎yuntuyingshi┃[PY]
+💎yuntuyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yuntuyingshi.py
 
-💎蝶卡影视┃[PY]
+💎蝶卡影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/蝶卡影视.py
 
-💎meiridasai┃[PY]
+💎meiridasai┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/meiridasai.py
 
-💎毒舌影视┃[PY]
+💎毒舌影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/毒舌影视.py
 
-💎hanxiaoquan┃[PY]
+💎hanxiaoquan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hanxiaoquan.py
 
-💎Aueteyingshi┃[PY]
+💎Aueteyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Aueteyingshi.py
 
-💎布布追剧┃[PY]
+💎布布追剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/布布追剧.py
 
-💎Beeg┃[PY]
+💎Beeg┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Beeg.py
 
-💎qiwei┃[PY]
+💎qiwei┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qiwei.py
 
-💎daji┃[PY]
+💎daji┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/daji.py
 
-💎lsys111┃[PY]
+💎lsys111┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/lsys111.py
 
-💎神秘电影┃[PY]
+💎神秘电影┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/神秘电影.py
 
-💎dongmanbashi┃[PY]
+💎dongmanbashi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dongmanbashi.py
 
-💎feikuaiTV┃[PY]
+💎feikuaiTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/feikuaiTV.py
 
-💎小熊猫影视┃[PY]
+💎小熊猫影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小熊猫影视.py
 
-💎水兰亭┃[PY]
+💎水兰亭┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/水兰亭.py
 
-💎jimoayi┃[PY]
+💎jimoayi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jimoayi.py
 
-💎河马短剧┃[PY]
+💎河马短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/河马短剧.py
 
-💎yinshouxueyuan┃[PY]
+💎yinshouxueyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinshouxueyuan.py
 
-💎Pandalivezhibo┃[PY]
+💎Pandalivezhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Pandalivezhibo.py
 
-💎独播库┃[PY]
+💎独播库┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/独播库.py
 
-💎山楂影视1┃[PY]
+💎山楂影视1┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/山楂影视1.py
 
-💎DJyouyou┃[PY]
+💎DJyouyou┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DJyouyou.py
 
-💎zhenlangyingshi┃[PY]
+💎zhenlangyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhenlangyingshi.py
 
-💎猫咪TV┃[PY]
+💎猫咪TV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/猫咪TV.py
 
-💎py_电影猎手┃[PY]
+💎py_电影猎手┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_电影猎手.py
 
-💎51视频┃[PY]
+💎51视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51视频.py
 
-💎APPV2┃[PY]
+💎APPV2┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/APPV2.py
 
-💎duanjujuhe┃[PY]
+💎duanjujuhe┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duanjujuhe.py
 
-💎kiss┃[PY]
+💎kiss┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kiss.py
 
-💎悠悠APP┃[PY]
+💎悠悠APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/悠悠APP.py
 
-💎jinpaiAPP┃[PY]
+💎jinpaiAPP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jinpaiAPP.py
 
-💎baduyingyuan┃[PY]
+💎baduyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baduyingyuan.py
 
-💎dantatv┃[PY]
+💎dantatv┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dantatv.py
 
-💎油管┃[PY]
+💎油管┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/油管.py
 
-💎miyunshipin┃[PY]
+💎miyunshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/miyunshipin.py
 
-💎hige┃[PY]
+💎hige┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hige.py
 
-💎千千影视┃[PY]
+💎千千影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/千千影视.py
 
-💎jipinshaonv┃[PY]
+💎jipinshaonv┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jipinshaonv.py
 
-💎nvxuesheng┃[PY]
+💎nvxuesheng┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/nvxuesheng.py
 
-💎JKlingyu┃[PY]
+💎JKlingyu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/JKlingyu.py
 
-💎hqg┃[PY]
+💎hqg┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hqg.py
 
-💎零度影视┃[PY]
+💎零度影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/零度影视.py
 
-💎兄弟影视┃[PY]
+💎兄弟影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/兄弟影视.py
 
-💎yingkeduanju┃[PY]
+💎yingkeduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yingkeduanju.py
 
-💎pipixia┃[PY]
+💎pipixia┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/pipixia.py
 
-💎恋鱼影视┃[PY]
+💎恋鱼影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/恋鱼影视.py
 
-💎reboAPP┃[PY]
+💎reboAPP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/reboAPP.py
 
-💎绝对影视┃[PY]
+💎绝对影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/绝对影视.py
 
-💎奇点影视┃[PY]
+💎奇点影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奇点影视.py
 
-💎aikanjiqiren┃[PY]
+💎aikanjiqiren┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/aikanjiqiren.py
 
-💎CNFLIX┃[PY]
+💎CNFLIX┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/CNFLIX.py
 
-💎FullHD┃[PY]
+💎FullHD┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/FullHD.py
 
-💎guanfengyingshi┃[PY]
+💎guanfengyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/guanfengyingshi.py
 
-💎madoumianfeizaixianbofang┃[PY]
+💎madoumianfeizaixianbofang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/madoumianfeizaixianbofang.py
 
-💎baiheTV┃[PY]
+💎baiheTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baiheTV.py
 
-💎Jable┃[PY]
+💎Jable┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Jable.py
 
-💎油管直播┃[PY]
+💎油管直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/油管直播.py
 
-💎51爆料┃[PY]
+💎51爆料┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51爆料.py
 
-💎界影视┃[PY]
+💎界影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/界影视.py
 
-💎dijiuduanjuwang┃[PY]
+💎dijiuduanjuwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dijiuduanjuwang.py
 
-💎胖虎APP┃[PY]
+💎胖虎APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/胖虎APP.py
 
-💎蜜桃视频┃[PY]
+💎蜜桃视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/蜜桃视频.py
 
-💎奈飞┃[PY]
+💎奈飞┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奈飞.py
 
-💎bubuzhuiju┃[PY]
+💎bubuzhuiju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bubuzhuiju.py
 
-💎live_smt┃[PY]
+💎live_smt┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/live_smt.py
 
-💎py_jianpian┃[PY]
+💎py_jianpian┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_jianpian.py
 
-💎旺旺影视┃[PY]
+💎旺旺影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/旺旺影视.py
 
-💎小皮影院┃[PY]
+💎小皮影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小皮影院.py
 
-💎qingchunfupo┃[PY]
+💎qingchunfupo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingchunfupo.py
 
-💎4K电影网┃[PY]
+💎4K电影网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4K电影网.py
 
-💎sanliushipin┃[PY]
+💎sanliushipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/sanliushipin.py
 
-💎paishexianchang┃[PY]
+💎paishexianchang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/paishexianchang.py
 
-💎uaa有声┃[PY]
+💎uaa有声┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/uaa有声.py
 
-💎caijijuhechengren┃[PY]
+💎caijijuhechengren┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caijijuhechengren.py
 
-💎netfapx┃[PY]
+💎netfapx┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/netfapx.py
 
-💎ptt_red┃[PY]
+💎ptt_red┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ptt_red.py
 
-💎华数┃[PY]
+💎华数┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/华数.py
 
-💎TOPTV┃[PY]
+💎TOPTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/TOPTV.py
 
-💎xlys┃[PY]
+💎xlys┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/xlys.py
 
-💎久久視頻┃[PY]
+💎久久視頻┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/久久視頻.py
 
-💎Phb┃[PY]
+💎Phb┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Phb.py
 
-💎zhenshiweiliuchu┃[PY]
+💎zhenshiweiliuchu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhenshiweiliuchu.py
 
-💎py_aigua┃[PY]
+💎py_aigua┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_aigua.py
 
-💎ssjh┃[PY]
+💎ssjh┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ssjh.py
 
-💎Xvd┃[PY]
+💎Xvd┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Xvd.py
 
-💎qiyouyingyuan┃[PY]
+💎qiyouyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qiyouyingyuan.py
 
-💎dashixiongyingshi┃[PY]
+💎dashixiongyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dashixiongyingshi.py
 
-💎bihe┃[PY]
+💎bihe┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bihe.py
 
-💎热播APP┃[PY]
+💎热播APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/热播APP.py
 
-💎chimeiwangliang┃[PY]
+💎chimeiwangliang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/chimeiwangliang.py
 
-💎桦树┃[PY]
+💎桦树┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/桦树.py
 
-💎Cam4zhibo┃[PY]
+💎Cam4zhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Cam4zhibo.py
 
-💎爱奇艺┃[PY]
+💎爱奇艺┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱奇艺.py
 
-💎pengranxindong┃[PY]
+💎pengranxindong┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/pengranxindong.py
 
-💎蓝莓短剧┃[PY]
+💎蓝莓短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/蓝莓短剧.py
 
-💎剧多短剧APP┃[PY]
+💎剧多短剧APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧多短剧APP.py
 
-💎madouyingyuan┃[PY]
+💎madouyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/madouyingyuan.py
 
-💎资源管理备用┃[PY]
+💎资源管理备用┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/资源管理备用.py
 
-💎ytb┃[PY]
+💎ytb┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ytb.py
 
-💎caihuadadao┃[PY]
+💎caihuadadao┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caihuadadao.py
 
-💎犀牛短剧┃[PY]
+💎犀牛短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/犀牛短剧.py
 
-💎骚火影视┃[PY]
+💎骚火影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/骚火影视.py
 
-💎meijutiantang┃[PY]
+💎meijutiantang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/meijutiantang.py
 
-💎zhizhiyingshi┃[PY]
+💎zhizhiyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhizhiyingshi.py
 
-💎剧粑粑影视┃[PY]
+💎剧粑粑影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧粑粑影视.py
 
-💎guaziAPP┃[PY]
+💎guaziAPP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/guaziAPP.py
 
-💎DJ音乐网┃[PY]
+💎DJ音乐网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DJ音乐网.py
 
-💎fulitiantang┃[PY]
+💎fulitiantang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fulitiantang.py
 
-💎EcoHubyingshi┃[PY]
+💎EcoHubyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/EcoHubyingshi.py
 
-💎batiandianying┃[PY]
+💎batiandianying┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/batiandianying.py
 
-💎808影院┃[PY]
+💎808影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/808影院.py
 
-💎MoTV┃[PY]
+💎MoTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/MoTV.py
 
-💎duanjubashi┃[PY]
+💎duanjubashi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duanjubashi.py
 
-💎两个BT┃[PY]
+💎两个BT┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/两个BT.py
 
-💎采集聚合┃[PY]
+💎采集聚合┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/采集聚合.py
 
-💎周六影库┃[PY]
+💎周六影库┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/周六影库.py
 
-💎daishuyingshi┃[PY]
+💎daishuyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/daishuyingshi.py
 
-💎djgemyinyuewang┃[PY]
+💎djgemyinyuewang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/djgemyinyuewang.py
 
-💎轻音乐┃[PY]
+💎轻音乐┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/轻音乐.py
 
-💎三号动漫APP┃[PY]
+💎三号动漫APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/三号动漫APP.py
 
-💎paopaoyingyuan┃[PY]
+💎paopaoyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/paopaoyingyuan.py
 
-💎星辰影院┃[PY]
+💎星辰影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/星辰影院.py
 
-💎云端影视┃[PY]
+💎云端影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/云端影视.py
 
-💎fengyeyingyuan┃[PY]
+💎fengyeyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fengyeyingyuan.py
 
-💎Pomo4K┃[PY]
+💎Pomo4K┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Pomo4K.py
 
-💎剧爸爸┃[PY]
+💎剧爸爸┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧爸爸.py
 
-💎changzhangziyuan┃[PY]
+💎changzhangziyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/changzhangziyuan.py
 
-💎yinyuejuhe┃[PY]
+💎yinyuejuhe┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinyuejuhe.py
 
-💎麻豆免费在线播放┃[PY]
+💎麻豆免费在线播放┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/麻豆免费在线播放.py
 
-💎可可影视┃[PY]
+💎可可影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/可可影视.py
 
-💎CliCli动漫┃[PY]
+💎CliCli动漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/CliCli动漫.py
 
-💎gogogo┃[PY]
+💎gogogo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gogogo.py
 
-💎FreeOK┃[PY]
+💎FreeOK┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/FreeOK.py
 
-💎自动加载30本地安全扫描┃[PY]
+💎自动加载30本地安全扫描┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动加载30本地安全扫描.py
 
-💎saohuoyingshi┃[PY]
+💎saohuoyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/saohuoyingshi.py
 
-💎qilinyingshi┃[PY]
+💎qilinyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qilinyingshi.py
 
-💎太乙影视┃[PY]
+💎太乙影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/太乙影视.py
 
-💎枫叶音乐┃[PY]
+💎枫叶音乐┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/枫叶音乐.py
 
-💎456dianyingwang┃[PY]
+💎456dianyingwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/456dianyingwang.py
 
-💎99duanjuwang┃[PY]
+💎99duanjuwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/99duanjuwang.py
 
-💎nunuyingyuan┃[PY]
+💎nunuyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/nunuyingyuan.py
 
-💎qisegu┃[PY]
+💎qisegu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qisegu.py
 
-💎aikanbot┃[PY]
+💎aikanbot┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/aikanbot.py
 
-💎huanmujulebu┃[PY]
+💎huanmujulebu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huanmujulebu.py
 
-💎DJ呦呦┃[PY]
+💎DJ呦呦┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DJ呦呦.py
 
-💎边缘影视┃[PY]
+💎边缘影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/边缘影视.py
 
-💎剧迷┃[PY]
+💎剧迷┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧迷.py
 
-💎光速影视┃[PY]
+💎光速影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/光速影视.py
 
-💎米盘搜┃[PY]
+💎米盘搜┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/米盘搜.py
 
-💎66dapianwang┃[PY]
+💎66dapianwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/66dapianwang.py
 
-💎大象影视┃[PY]
+💎大象影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/大象影视.py
 
-💎youguanxf┃[PY]
+💎youguanxf┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youguanxf.py
 
-💎jingdongyinlianxf┃[PY]
+💎jingdongyinlianxf┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jingdongyinlianxf.py
 
-💎ahadjwang┃[PY]
+💎ahadjwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ahadjwang.py
 
-💎didayingshi┃[PY]
+💎didayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/didayingshi.py
 
-💎MiFundongman┃[PY]
+💎MiFundongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/MiFundongman.py
 
-💎善解人衣┃[PY]
+💎善解人衣┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/善解人衣.py
 
-💎七猫影视┃[PY]
+💎七猫影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/七猫影视.py
 
-💎youshengsaomai┃[PY]
+💎youshengsaomai┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youshengsaomai.py
 
-💎FullHD(1)┃[PY]
+💎FullHD(1)┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/FullHD(1).py
 
-💎小苹果APP┃[PY]
+💎小苹果APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小苹果APP.py
 
-💎华谊影视┃[PY]
+💎华谊影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/华谊影视.py
 
-💎搜剧AI┃[PY]
+💎搜剧AI┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/搜剧AI.py
 
-💎huangsecangku┃[PY]
+💎huangsecangku┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huangsecangku.py
 
-💎MiFun动漫┃[PY]
+💎MiFun动漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/MiFun动漫.py
 
-💎erzishangxue┃[PY]
+💎erzishangxue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/erzishangxue.py
 
-💎zhainanyingshi┃[PY]
+💎zhainanyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhainanyingshi.py
 
-💎youzhifennenbao┃[PY]
+💎youzhifennenbao┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youzhifennenbao.py
 
-💎网络直播┃[PY]
+💎网络直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/网络直播.py
 
-💎51baoliao┃[PY]
+💎51baoliao┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51baoliao.py
 
-💎baose┃[PY]
+💎baose┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baose.py
 
-💎哔哩视频┃[PY]
+💎哔哩视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/哔哩视频.py
 
-💎酷我┃[PY]
+💎酷我┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/酷我.py
 
-💎douhuayingshi┃[PY]
+💎douhuayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/douhuayingshi.py
 
-💎4Kyingshicang┃[PY]
+💎4Kyingshicang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4Kyingshicang.py
 
-💎maitianyingyuan┃[PY]
+💎maitianyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/maitianyingyuan.py
 
-💎miniyingshi┃[PY]
+💎miniyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/miniyingshi.py
 
-💎jinrikanliao┃[PY]
+💎jinrikanliao┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jinrikanliao.py
 
-💎kafeizhibo┃[PY]
+💎kafeizhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kafeizhibo.py
 
-💎kkys┃[PY]
+💎kkys┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kkys.py
 
-💎zhuancaoxiaohua┃[PY]
+💎zhuancaoxiaohua┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhuancaoxiaohua.py
 
-💎275tingshu┃[PY]
+💎275tingshu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/275tingshu.py
 
-💎月之祠┃[PY]
+💎月之祠┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/月之祠.py
 
-💎奇迹影视┃[PY]
+💎奇迹影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奇迹影视.py
 
-💎云速影视┃[PY]
+💎云速影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/云速影视.py
 
-💎4K影院┃[PY]
+💎4K影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4K影院.py
 
-💎bilizhibo┃[PY]
+💎bilizhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bilizhibo.py
 
-💎Chaturbate┃[PY]
+💎Chaturbate┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Chaturbate.py
 
-💎heiliaowang┃[PY]
+💎heiliaowang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/heiliaowang.py
 
-💎hemayingshi┃[PY]
+💎hemayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hemayingshi.py
 
-💎caoliushequ┃[PY]
+💎caoliushequ┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caoliushequ.py
 
-💎hanguoseqingdianying┃[PY]
+💎hanguoseqingdianying┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hanguoseqingdianying.py
 
-💎51shipin┃[PY]
+💎51shipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51shipin.py
 
-💎51anwang┃[PY]
+💎51anwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51anwang.py
 
-💎py_douban┃[PY]
+💎py_douban┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_douban.py
 
-💎fengye4K┃[PY]
+💎fengye4K┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fengye4K.py
 
-💎junnianyingyuan┃[PY]
+💎junnianyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/junnianyingyuan.py
 
-💎changzhangyingshi┃[PY]
+💎changzhangyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/changzhangyingshi.py
 
-💎弟大勿勃┃[PY]
+💎弟大勿勃┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/弟大勿勃.py
 
-💎禁片天堂┃[PY]
+💎禁片天堂┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/禁片天堂.py
 
-💎kanjuAI┃[PY]
+💎kanjuAI┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kanjuAI.py
 
-💎甜圈短剧┃[PY]
+💎甜圈短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/甜圈短剧.py
 
-💎yangguang┃[PY]
+💎yangguang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yangguang.py
 
-💎huashuTV┃[PY]
+💎huashuTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huashuTV.py
 
-💎橘汁视频┃[PY]
+💎橘汁视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/橘汁视频.py
 
-💎永乐视频┃[PY]
+💎永乐视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/永乐视频.py
 
-💎fenglinwang┃[PY]
+💎fenglinwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fenglinwang.py
 
-💎baihuayingyuan┃[PY]
+💎baihuayingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/baihuayingyuan.py
 
-💎哇哇APP┃[PY]
+💎哇哇APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/哇哇APP.py
 
-💎duanjudaquan┃[PY]
+💎duanjudaquan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duanjudaquan.py
 
-💎456电影网┃[PY]
+💎456电影网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/456电影网.py
 
-💎浴火社APP┃[PY]
+💎浴火社APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/浴火社APP.py
 
-💎51大赛┃[PY]
+💎51大赛┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51大赛.py
 
-💎51duanju┃[PY]
+💎51duanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51duanju.py
 
-💎yuetingba┃[PY]
+💎yuetingba┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yuetingba.py
 
-💎roushipin┃[PY]
+💎roushipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/roushipin.py
 
-💎央视网┃[PY]
+💎央视网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/央视网.py
 
-💎文才影视┃[PY]
+💎文才影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/文才影视.py
 
-💎qingniuyingshi┃[PY]
+💎qingniuyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingniuyingshi.py
 
-💎红果短剧┃[PY]
+💎红果短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/红果短剧.py
 
-💎saohuo┃[PY]
+💎saohuo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/saohuo.py
 
-💎chengrenleyuan┃[PY]
+💎chengrenleyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/chengrenleyuan.py
 
-💎Chaturbate2┃[PY]
+💎Chaturbate2┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Chaturbate2.py
 
-💎hubff┃[PY]
+💎hubff┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hubff.py
 
-💎pomo┃[PY]
+💎pomo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/pomo.py
 
-💎caomeiyingshi┃[PY]
+💎caomeiyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/caomeiyingshi.py
 
-💎aigua┃[PY]
+💎aigua┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/aigua.py
 
-💎luolijuji┃[PY]
+💎luolijuji┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luolijuji.py
 
-💎爱影视┃[PY]
+💎爱影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱影视.py
 
-💎mitaoyuan┃[PY]
+💎mitaoyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/mitaoyuan.py
 
-💎diekayingshi┃[PY]
+💎diekayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/diekayingshi.py
 
-💎爱看机器人┃[PY]
+💎爱看机器人┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱看机器人.py
 
-💎咖啡直播┃[PY]
+💎咖啡直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/咖啡直播.py
 
-💎瓜娃子┃[PY]
+💎瓜娃子┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/瓜娃子.py
 
-💎影视大全┃[PY]
+💎影视大全┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/影视大全.py
 
-💎BadNews┃[PY]
+💎BadNews┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/BadNews.py
 
-💎每日大乱斗┃[PY]
+💎每日大乱斗┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/每日大乱斗.py
 
-💎youshipin┃[PY]
+💎youshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/youshipin.py
 
-💎剧多短剧┃[PY]
+💎剧多短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/剧多短剧.py
 
-💎央视影视┃[PY]
+💎央视影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/央视影视.py
 
-💎光速APP┃[PY]
+💎光速APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/光速APP.py
 
-💎6080yingshi┃[PY]
+💎6080yingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/6080yingshi.py
 
-💎贝乐虎┃[PY]
+💎贝乐虎┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/贝乐虎.py
 
-💎爱瓜影视┃[PY]
+💎爱瓜影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱瓜影视.py
 
-💎嘀嗒影视┃[PY]
+💎嘀嗒影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/嘀嗒影视.py
 
-💎麻豆社┃[PY]
+💎麻豆社┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/麻豆社.py
 
-💎zhiboluping┃[PY]
+💎zhiboluping┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhiboluping.py
 
-💎追光影视┃[PY]
+💎追光影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/追光影视.py
 
-💎luzhuangyuan┃[PY]
+💎luzhuangyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/luzhuangyuan.py
 
-💎努努影院┃[PY]
+💎努努影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/努努影院.py
 
-💎momoyiyeqing┃[PY]
+💎momoyiyeqing┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/momoyiyeqing.py
 
-💎hongguo┃[PY]
+💎hongguo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hongguo.py
 
-💎huangguo┃[PY]
+💎huangguo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huangguo.py
 
-💎gaoqingdianbo┃[PY]
+💎gaoqingdianbo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gaoqingdianbo.py
 
-💎51吃瓜┃[PY]
+💎51吃瓜┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51吃瓜.py
 
-💎maple┃[PY]
+💎maple┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/maple.py
 
-💎资源管理┃[PY]
+💎资源管理┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/资源管理.py
 
-💎dadiaoshipin┃[PY]
+💎dadiaoshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dadiaoshipin.py
 
-💎小鸭子看看┃[PY]
+💎小鸭子看看┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小鸭子看看.py
 
-💎juhezhibo┃[PY]
+💎juhezhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/juhezhibo.py
 
-💎movie┃[PY]
+💎movie┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/movie.py
 
-💎歪比巴卜┃[PY]
+💎歪比巴卜┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/歪比巴卜.py
 
-💎dusheduanju┃[PY]
+💎dusheduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/dusheduanju.py
 
-💎兔岛影院┃[PY]
+💎兔岛影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/兔岛影院.py
 
-💎zaixianduanju┃[PY]
+💎zaixianduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zaixianduanju.py
 
-💎酒与花┃[PY]
+💎酒与花┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/酒与花.py
 
-💎威视TV┃[PY]
+💎威视TV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/威视TV.py
 
-💎美帕APP┃[PY]
+💎美帕APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/美帕APP.py
 
-💎每日大赛┃[PY]
+💎每日大赛┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/每日大赛.py
 
-💎第七区┃[PY]
+💎第七区┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/第七区.py
 
-💎mose365┃[PY]
+💎mose365┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/mose365.py
 
-💎夜社┃[PY]
+💎夜社┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/夜社.py
 
-💎万彩坊影视┃[PY]
+💎万彩坊影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/万彩坊影视.py
 
-💎山楂影视┃[PY]
+💎山楂影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/山楂影视.py
 
-💎茶杯狐影视┃[PY]
+💎茶杯狐影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/茶杯狐影视.py
 
-💎kkys1┃[PY]
+💎kkys1┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kkys1.py
 
-💎吉利猫┃[PY]
+💎吉利猫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/吉利猫.py
 
-💎qingkongciyuan┃[PY]
+💎qingkongciyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingkongciyuan.py
 
-💎枝枝影视┃[PY]
+💎枝枝影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/枝枝影视.py
 
-💎jiujiushipin┃[PY]
+💎jiujiushipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jiujiushipin.py
 
-💎libvio┃[PY]
+💎libvio┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/libvio.py
 
-💎四虎视频┃[PY]
+💎四虎视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/四虎视频.py
 
-💎feiliushipin┃[PY]
+💎feiliushipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/feiliushipin.py
 
-💎rolizxwnoble┃[PY]
+💎rolizxwnoble┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/rolizxwnoble.py
 
-💎高清电影┃[PY]
+💎高清电影┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/高清电影.py
 
-💎采集聚合追剧┃[PY]
+💎采集聚合追剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/采集聚合追剧.py
 
-💎daxiangyingshi┃[PY]
+💎daxiangyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/daxiangyingshi.py
 
-💎小苹果影视┃[PY]
+💎小苹果影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/小苹果影视.py
 
-💎ysttv┃[PY]
+💎ysttv┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ysttv.py
 
-💎mahuayingshi┃[PY]
+💎mahuayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/mahuayingshi.py
 
-💎yiniuyingshi┃[PY]
+💎yiniuyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yiniuyingshi.py
 
-💎优视频┃[PY]
+💎优视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/优视频.py
 
-💎sync-pg┃[PY]
+💎sync-pg┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/sync-pg.py
 
-💎qingwayingshi┃[PY]
+💎qingwayingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingwayingshi.py
 
-💎妲己┃[PY]
+💎妲己┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/妲己.py
 
-💎HSriben4Kdongman┃[PY]
+💎HSriben4Kdongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/HSriben4Kdongman.py
 
-💎juziziyuan┃[PY]
+💎juziziyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/juziziyuan.py
 
-💎naitangshipin┃[PY]
+💎naitangshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/naitangshipin.py
 
-💎Cam4直播┃[PY]
+💎Cam4直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Cam4直播.py
 
-💎hitvAPP┃[PY]
+💎hitvAPP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/hitvAPP.py
 
-💎DSYS┃[PY]
+💎DSYS┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DSYS.py
 
-💎51chigua┃[PY]
+💎51chigua┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51chigua.py
 
-💎fengshangyingshi┃[PY]
+💎fengshangyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fengshangyingshi.py
 
-💎奇库影视┃[PY]
+💎奇库影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奇库影视.py
 
-💎huangsecangkudongtaiban┃[PY]
+💎huangsecangkudongtaiban┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huangsecangkudongtaiban.py
 
-💎007吃瓜┃[PY]
+💎007吃瓜┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/007吃瓜.py
 
-💎国外剧┃[PY]
+💎国外剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/国外剧.py
 
-💎麒麟影视┃[PY]
+💎麒麟影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/麒麟影视.py
 
-💎爱听音乐┃[PY]
+💎爱听音乐┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/爱听音乐.py
 
-💎bainianzhibo┃[PY]
+💎bainianzhibo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bainianzhibo.py
 
-💎红果网页┃[PY]
+💎红果网页┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/红果网页.py
 
-💎火车太顺APP┃[PY]
+💎火车太顺APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/火车太顺APP.py
 
-💎damixingqiu┃[PY]
+💎damixingqiu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/damixingqiu.py
 
-💎茶杯狐┃[PY]
+💎茶杯狐┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/茶杯狐.py
 
-💎Hanime┃[PY]
+💎Hanime┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Hanime.py
 
-💎电影人生┃[PY]
+💎电影人生┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/电影人生.py
 
-💎低端影视┃[PY]
+💎低端影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/低端影视.py
 
-💎aidanyingshi┃[PY]
+💎aidanyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/aidanyingshi.py
 
-💎源没有图标央视网┃[PY]
+💎源没有图标央视网┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/源没有图标央视网.py
 
-💎meiridaluandou┃[PY]
+💎meiridaluandou┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/meiridaluandou.py
 
-💎haolaiwuyingyuan┃[PY]
+💎haolaiwuyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/haolaiwuyingyuan.py
 
-💎qiyoudy┃[PY]
+💎qiyoudy┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qiyoudy.py
 
-💎nuomiduanju┃[PY]
+💎nuomiduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/nuomiduanju.py
 
-💎yubanghanzhu┃[PY]
+💎yubanghanzhu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yubanghanzhu.py
 
-💎mioaying影视┃[PY]
+💎mioaying影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/mioaying影视.py
 
-💎蛋挞TV┃[PY]
+💎蛋挞TV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/蛋挞TV.py
 
-💎gongqingchunyingyuan┃[PY]
+💎gongqingchunyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gongqingchunyingyuan.py
 
-💎Xvideos┃[PY]
+💎Xvideos┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/Xvideos.py
 
-💎canchiduanjuwang┃[PY]
+💎canchiduanjuwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/canchiduanjuwang.py
 
-💎农民影视┃[PY]
+💎农民影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/农民影视.py
 
-💎gaokaomoni┃[PY]
+💎gaokaomoni┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gaokaomoni.py
 
-💎瓜子┃[PY]
+💎瓜子┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/瓜子.py
 
-💎stripchat┃[PY]
+💎stripchat┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/stripchat.py
 
-💎芒果视频┃[PY]
+💎芒果视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/芒果视频.py
 
-💎wlzb┃[PY]
+💎wlzb┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/wlzb.py
 
-💎chujianyingshi┃[PY]
+💎chujianyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/chujianyingshi.py
 
-💎ASMRtingshu┃[PY]
+💎ASMRtingshu┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ASMRtingshu.py
 
-💎51短剧┃[PY]
+💎51短剧┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51短剧.py
 
-💎樱花传媒┃[PY]
+💎樱花传媒┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/樱花传媒.py
 
-💎采集合集┃[PY]
+💎采集合集┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/采集合集.py
 
-💎资源管理老┃[PY]
+💎资源管理老┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/资源管理老.py
 
-💎kuangbiaoduanju┃[PY]
+💎kuangbiaoduanju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kuangbiaoduanju.py
 
-💎yiqiyingshi┃[PY]
+💎yiqiyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yiqiyingshi.py
 
-💎若惜影视┃[PY]
+💎若惜影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/若惜影视.py
 
-💎奇优动漫┃[PY]
+💎奇优动漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奇优动漫.py
 
-💎ddys┃[PY]
+💎ddys┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ddys.py
 
-💎51FANS┃[PY]
+💎51FANS┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/51FANS.py
 
-💎优酷视频┃[PY]
+💎优酷视频┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/优酷视频.py
 
-💎柯南影视┃[PY]
+💎柯南影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/柯南影视.py
 
-💎275听书┃[PY]
+💎275听书┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/275听书.py
 
-💎LIVES┃[PY]
+💎LIVES┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/LIVES.py
 
-💎mangguoTV┃[PY]
+💎mangguoTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/mangguoTV.py
 
-💎聚合直播┃[PY]
+💎聚合直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/聚合直播.py
 
-💎aiyifan┃[PY]
+💎aiyifan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/aiyifan.py
 
-💎粤漫┃[PY]
+💎粤漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/粤漫.py
 
-💎kanxiyingshi┃[PY]
+💎kanxiyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kanxiyingshi.py
 
-💎怦然心动┃[PY]
+💎怦然心动┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/怦然心动.py
 
-💎jiuyinzhengjing┃[PY]
+💎jiuyinzhengjing┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jiuyinzhengjing.py
 
-💎fqdm┃[PY]
+💎fqdm┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/fqdm.py
 
-💎西瓜影视┃[PY]
+💎西瓜影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/西瓜影视.py
 
-💎py_guowaiju┃[PY]
+💎py_guowaiju┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/py_guowaiju.py
 
-💎zhuiguangyingshi┃[PY]
+💎zhuiguangyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhuiguangyingshi.py
 
-💎熊猫直播┃[PY]
+💎熊猫直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/熊猫直播.py
 
-💎AppToV5┃[PY]
+💎AppToV5┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/AppToV5.py
 
-💎金牌影视┃[PY]
+💎金牌影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/金牌影视.py
 
-💎yinghuachuanmei┃[PY]
+💎yinghuachuanmei┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinghuachuanmei.py
 
-💎八天电影┃[PY]
+💎八天电影┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/八天电影.py
 
-💎6v┃[PY]
+💎6v┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/6v.py
 
-💎zhuiying┃[PY]
+💎zhuiying┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhuiying.py
 
-💎速搜┃[PY]
+💎速搜┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/速搜.py
 
-💎808yingyuan┃[PY]
+💎808yingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/808yingyuan.py
 
-💎悟空影视┃[PY]
+💎悟空影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/悟空影视.py
 
-💎huadouyingshi┃[PY]
+💎huadouyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/huadouyingshi.py
 
-💎qingchunrenqi┃[PY]
+💎qingchunrenqi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingchunrenqi.py
 
-💎DJ舞曲┃[PY]
+💎DJ舞曲┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/DJ舞曲.py
 
-💎大马猴┃[PY]
+💎大马猴┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/大马猴.py
 
-💎4k┃[PY]
+💎4k┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/4k.py
 
-💎秀秀┃[PY]
+💎秀秀┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/秀秀.py
 
-💎芒果TV┃[PY]
+💎芒果TV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/芒果TV.py
 
-💎haijiaoluanlun┃[PY]
+💎haijiaoluanlun┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/haijiaoluanlun.py
 
-💎短剧聚合┃[PY]
+💎短剧聚合┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/短剧聚合.py
 
-💎jiugequ┃[PY]
+💎jiugequ┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jiugequ.py
 
-💎bajiaojuchang┃[PY]
+💎bajiaojuchang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/bajiaojuchang.py
 
-💎美剧天堂┃[PY]
+💎美剧天堂┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/美剧天堂.py
 
-💎奇优影院┃[PY]
+💎奇优影院┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/奇优影院.py
 
-💎live_smt_proxy_001┃[PY]
+💎live_smt_proxy_001┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/live_smt_proxy_001.py
 
-💎007chigua┃[PY]
+💎007chigua┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/007chigua.py
 
-💎yinghuadongman┃[PY]
+💎yinghuadongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yinghuadongman.py
 
-💎yongleshipin┃[PY]
+💎yongleshipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yongleshipin.py
 
-💎MiFunP┃[PY]
+💎MiFunP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/MiFunP.py
 
-💎美帕影视┃[PY]
+💎美帕影视┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/美帕影视.py
 
-💎央视大全┃[PY]
+💎央视大全┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/央视大全.py
 
-💎yuezhici┃[PY]
+💎yuezhici┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yuezhici.py
 
-💎哔哩直播┃[PY]
+💎哔哩直播┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/哔哩直播.py
 
-💎zhentamaduofenlei┃[PY]
+💎zhentamaduofenlei┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhentamaduofenlei.py
 
-💎五月天┃[PY]
+💎五月天┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/五月天.py
 
-💎qingniaoyingshi┃[PY]
+💎qingniaoyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qingniaoyingshi.py
 
-💎douban┃[PY]
+💎douban┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/douban.py
 
-💎企鹅┃[PY]
+💎企鹅┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/企鹅.py
 
-💎jinpiantiantang┃[PY]
+💎jinpiantiantang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jinpiantiantang.py
 
-💎ytb1_m8┃[PY]
+💎ytb1_m8┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ytb1_m8.py
 
-💎yitingshuwang┃[PY]
+💎yitingshuwang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/yitingshuwang.py
 
-💎jieyingshi┃[PY]
+💎jieyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/jieyingshi.py
 
-💎duonaoyingyuan┃[PY]
+💎duonaoyingyuan┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duonaoyingyuan.py
 
-💎guosetianxiang┃[PY]
+💎guosetianxiang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/guosetianxiang.py
 
-💎duoduo┃[PY]
+💎duoduo┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/duoduo.py
 
-💎iSeseyingku┃[PY]
+💎iSeseyingku┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/iSeseyingku.py
 
-💎zhenshirenqi┃[PY]
+💎zhenshirenqi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/zhenshirenqi.py
 
-💎818heiliaowang┃[PY]
+💎818heiliaowang┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/818heiliaowang.py
 
-💎nishipin┃[PY]
+💎nishipin┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/nishipin.py
 
-💎视觉APP┃[PY]
+💎视觉APP┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/视觉APP.py
 
-💎ASMRba┃[PY]
+💎ASMRba┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/ASMRba.py
 
-💎映像星球┃[PY]
+💎映像星球┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/映像星球.py
 
-💎maomiTV┃[PY]
+💎maomiTV┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/maomiTV.py
 
-💎gongheguodongman┃[PY]
+💎gongheguodongman┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/gongheguodongman.py
 
-💎qianqianyinyue┃[PY]
+💎qianqianyinyue┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qianqianyinyue.py
 
-💎qidianyingshi┃[PY]
+💎qidianyingshi┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/qidianyingshi.py
 
-💎renqitouqing┃[PY]
+💎renqitouqing┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/renqitouqing.py
 
-💎七味┃[PY]
+💎七味┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/七味.py
 
-💎稀饭动漫┃[PY]
+💎稀饭动漫┃[CAT]
 https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/稀饭动漫.py
+
+💎自动加载┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动加载.py
+
+💎本地生成合并版┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/本地生成合并版.py
+
+💎本地影仓3.1改┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/本地影仓3.1改.py
+
+💎自动加载7.1┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动加载7.1.py
+
+💎自动加载-优化版┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动加载-优化版.py
+
+💎kai自动加载┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/kai自动加载.py
+
+💎自动分类加载┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/自动分类加载.py
+
+💎智能加载v5.1┃[CAT]
+https://gh-proxy.com/https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/智能加载v5.1.py
+
+💎getsearchtxt┃[GAOTIANLIUYUN]
+https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/main/lib/getsearchtxt.py
+
+💎getsearchtxt┃[GAOTIANLIUYUN]
+https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/main/json/getsearchtxt.py
+
+💎publish-typecho┃[LAOMA2053]
+https://gh-proxy.com/https://raw.githubusercontent.com/laoma2053/main/scripts/publish-typecho.py
 
 [俊哥接口] 低端影视(DRPY)
 http://home.jundie.top:666/JS/dr_py/libs/drpy.min.js
