@@ -717,7 +717,9 @@ payload:
   - DOMAIN-SUFFIX,jennyhow.com
   - DOMAIN-SUFFIX,jgsfnl.com
   - DOMAIN-SUFFIX,jhs7.makeup
+  - DOMAIN-SUFFIX,jiabaide.cn,域名2,域名
   - DOMAIN-SUFFIX,jiabaide.cn,域名2,域名3
+  - DOMAIN-SUFFIX,jiabaide.xn--cn,2,-108hc439eda
   - DOMAIN-SUFFIX,jiabaide.xn--cn,2,3-5h6jc219fda
   - DOMAIN-SUFFIX,jianyunys.com
   - DOMAIN-SUFFIX,jibcmjp.com
@@ -1611,6 +1613,7 @@ payload:
   - IP-CIDR,103.99.179.101/32
   - IP-CIDR,104.18.12.30/32
   - IP-CIDR,104.18.40.15/32
+  - IP-CIDR,104.18.42.16/32
   - IP-CIDR,104.18.42.163/32
   - IP-CIDR,104.18.42.197/32
   - IP-CIDR,104.19.150.230/32
