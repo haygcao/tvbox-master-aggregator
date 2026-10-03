@@ -1,0 +1,30 @@
+{
+  "web_sources": [
+    { "name": "饭太硬/肥猫", "url": "https://tvbox.clbug.com/user.php" },
+    { "name": "蜘蛛资源", "url": "https://www.zzzypro.com/" }
+  ],
+  "upstream_endpoints": [
+    { "name": "qist_js", "url": "https://raw.githubusercontent.com/qist/tvbox/main/js.json" },
+    { "name": "qist_367", "url": "https://raw.githubusercontent.com/qist/tvbox/main/367.json" },
+    { "name": "qist_dianshi", "url": "https://raw.githubusercontent.com/qist/tvbox/main/dianshi.json" },
+    { "name": "qist_xyq", "url": "https://raw.githubusercontent.com/qist/tvbox/main/XYQ.json" },
+    { "name": "youhun", "url": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/index.json" },
+    { "name": "feimao", "url": "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/feimao.json" },
+    { "name": "4k", "url": "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/4k.json" },
+    { "name": "wangerxiao", "url": "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/wangerxiao.json" },
+    { "name": "ouge", "url": "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/ouge.json" },
+    { "name": "CatVodSpider", "url": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json" },
+    { "name": "gaotianliuyun", "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json" },
+    { "name": "Yoursmile7", "url": "https://raw.githubusercontent.com/Yoursmile7/TVBox/main/XC.json" },
+    { "name": "liu673cn", "url": "https://raw.githubusercontent.com/liu673cn/box/main/m.json" },
+    { "name": "xiaolong69", "url": "https://raw.githubusercontent.com/xiaolong69/tv/main/1.json" },
+    { "name": "xyq", "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json" },
+    { "name": "guot55", "url": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json" },
+    { "name": "dxawi", "url": "https://dxawi.github.io/0/0.json" },
+    { "name": "cluntop", "url": "https://raw.githubusercontent.com/cluntop/tvbox/main/tvbox.json" },
+    { "name": "okay", "url": "https://raw.githubusercontent.com/songlees355-wq/okay/main/tvbox.json" },
+    { "name": "zxfhuy", "url": "https://raw.githubusercontent.com/zxfhuy/test/main/test.json" },
+    { "name": "jingyi251", "url": "https://raw.githubusercontent.com/jingyi251/a/main/a.json" },
+    { "name": "laoma2053", "url": "https://raw.githubusercontent.com/laoma2053/awesome-zhuiju-free/main/resources/resources.json" }
+  ]
+}

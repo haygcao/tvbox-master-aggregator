@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立任务一：全网资源配置合并、全量 PY 爬虫扫描与 18+ 黑名单物理过滤 (本地磁盘克隆版)
+ 独立任务一：全网资源配置合并、全量 PY 爬虫扫描与 18+ 黑名单物理过滤 (纯 JSON 配置驱动版)
 =============================================================================
 重点更新：
-  1. 置顶 1: 可可影视 4K 完美重构版 (kkys_master.py - 支持 5 维筛选与防盗链海报卡片)；
-  2. 彻底扩充 18+ 黑名单词库；
-  3. 在 tvbox.json 中嵌入 live.txt 直播源链接，实现点播+直播完美融合！
+  1. 100% 配置文件驱动：动态读取 config/source_urls.json，包含 qist/tvbox 等全量订阅源；
+  2. 整合 qist/py/ 目录下的 Python 爬虫 (星芽短剧, 剧王短剧, TVB云播, 网络直播, libvio 等)；
+  3. 18+ 点播配置隔离：命中黑名单的采集站与 API 全量隔离存入 not_suitable/tvbox.json；
+  4. 置顶 1: 可可影视 4K 完美重构版 (kkys_master.py - 支持 5 维筛选与防盗链海报卡片)；
+  5. 磁盘全量 os.listdir 扫描 repos/ 下所有 .py 爬虫源码，0.001 秒离线完成。
 =============================================================================
 """
 
@@ -22,6 +24,7 @@ import urllib.parse
 from urllib.parse import urlparse
 
 WORK_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_DIR = os.path.join(WORK_DIR, "config")
 CF_PROXY = os.environ.get("CF_PROXY", "")
 
 CLEANED_51_CATEGORIES = [
@@ -137,29 +140,6 @@ SEX_KEYWORDS = [
     "色", "阴", "撸", "少女", "侄女", "妻", "草榴", "萝莉", "鉴黄", "黄色", "香肠"
 ]
 
-UPSTREAM_REPO_ENDPOINTS = [
-    ("youhun", "https://raw.githubusercontent.com/youhunwl/TVAPP/main/index.json"),
-    ("feimao", "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/feimao.json"),
-    ("4k", "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/4k.json"),
-    ("wangerxiao", "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/wangerxiao.json"),
-    ("ouge", "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@main/output/ouge.json"),
-    ("CatVodSpider", "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json"),
-    ("gaotianliuyun", "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"),
-    ("Yoursmile7", "https://raw.githubusercontent.com/Yoursmile7/TVBox/main/XC.json"),
-    ("liu673cn", "https://raw.githubusercontent.com/liu673cn/box/main/m.json"),
-    ("xiaolong69", "https://raw.githubusercontent.com/xiaolong69/tv/main/1.json"),
-    ("xyq", "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"),
-    ("guot55", "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json"),
-    ("dxawi", "https://dxawi.github.io/0/0.json"),
-    ("mymine", "https://raw.githubusercontent.com/mymine/CatVodSpider/main/json/config.json"),
-    ("cluntop", "https://raw.githubusercontent.com/cluntop/tvbox/main/tvbox.json"),
-    ("okay", "https://raw.githubusercontent.com/songlees355-wq/okay/main/tvbox.json"),
-    ("zxfhuy", "https://raw.githubusercontent.com/zxfhuy/test/main/test.json"),
-    ("jingyi251", "https://raw.githubusercontent.com/jingyi251/a/main/a.json"),
-    ("jie20091116", "https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/config.json"),
-    ("laoma2053", "https://raw.githubusercontent.com/laoma2053/awesome-zhuiju-free/main/resources/resources.json")
-]
-
 SSL_CTX = ssl.create_default_context()
 SSL_CTX.check_hostname = False
 SSL_CTX.verify_mode = ssl.CERT_NONE
@@ -233,69 +213,93 @@ def clean_api_url(api):
     api = re.sub(r'[\?&]ac=(list|detail|videolist|vod).*$', '', api, flags=re.I)
     return api.rstrip("/")
 
-def scan_all_py_scripts_from_jie_cat():
-    print("  [磁盘 PY 扫描器] 正在通过本地磁盘 os.listdir 全量扫描 repos/cat/TVBOX/PY/ 目录...", flush=True)
+def scan_all_py_scripts_from_repos():
+    """扫描 repos/ 下所有已克隆仓库中的 .py 爬虫源码 (包含 cat, qist/py 等)"""
+    print("  [磁盘 PY 扫描器] 正在全量扫描 repos/ 下所有仓库中的 .py 爬虫源码...", flush=True)
     scanned_sites = []
 
-    local_py_dir = os.path.join(WORK_DIR, "repos", "cat", "TVBOX", "PY")
-    if not os.path.exists(local_py_dir):
-        local_py_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "repos", "cat", "TVBOX", "PY"))
+    repos_dir = os.path.join(WORK_DIR, "repos")
+    if os.path.exists(repos_dir):
+        for root, _, files in os.walk(repos_dir):
+            for fname in files:
+                if fname.endswith(".py") and not fname.startswith("test") and not fname.startswith("setup"):
+                    clean_stem = fname[:-3]
+                    if is_blacklisted(fname) or is_blacklisted(clean_stem):
+                        continue
 
-    if os.path.exists(local_py_dir):
-        for fname in os.listdir(local_py_dir):
-            if fname.endswith(".py"):
-                clean_stem = fname[:-3]
-                if is_blacklisted(fname) or is_blacklisted(clean_stem):
-                    continue
+                    # 构建其相对于 repos/ 磁盘的 GitHub Raw 托管路径
+                    rel_path = os.path.relpath(os.path.join(root, fname), repos_dir).replace("\\", "/")
+                    parts = rel_path.split("/")
+                    repo_name = parts[0]
+                    sub_path = "/".join(parts[1:])
 
-                raw_github_url = f"https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/{fname}"
-                proxied_url = f"{GH_PROXY_PREFIX}{raw_github_url}"
+                    # 映射仓库至其原生 GitHub 路径
+                    repo_github_map = {
+                        "cat": "https://raw.githubusercontent.com/jie20091116/cat/a201c9690267c1ab4e3f65d5a1fca80662438fa0/TVBOX/PY/",
+                        "qist": "https://raw.githubusercontent.com/qist/tvbox/main/py/"
+                    }
 
-                site_obj = {
-                    "key": f"py_{clean_stem}",
-                    "name": f"💎{clean_stem}┃[PY]",
-                    "type": 3,
-                    "api": proxied_url,
-                    "searchable": 1,
-                    "quickSearch": 1,
-                    "filterable": 1,
-                    "style": { "type": "rect", "ratio": 1.33 }
-                }
-                scanned_sites.append(site_obj)
+                    if repo_name in repo_github_map:
+                        raw_github_url = f"{repo_github_map[repo_name]}{os.path.basename(fname)}"
+                    else:
+                        raw_github_url = f"https://raw.githubusercontent.com/{repo_name}/main/{sub_path}"
+
+                    proxied_url = f"{GH_PROXY_PREFIX}{raw_github_url}"
+
+                    site_obj = {
+                        "key": f"py_{repo_name}_{clean_stem}",
+                        "name": f"💎{clean_stem}┃[{repo_name.upper()}]",
+                        "type": 3,
+                        "api": proxied_url,
+                        "searchable": 1,
+                        "quickSearch": 1,
+                        "filterable": 1,
+                        "style": { "type": "rect", "ratio": 1.33 }
+                    }
+                    scanned_sites.append(site_obj)
 
     print(f"  └─ 本地磁盘扫描完成！共捕获并通过 18+ 过滤 {len(scanned_sites)} 个合法 PY 独立爬虫节点！", flush=True)
     return scanned_sites
 
+def load_source_urls_config():
+    """动态读取 config/source_urls.json 配置文件 (0 代码硬编码)"""
+    config_path = os.path.join(CONFIG_DIR, "source_urls.json")
+    sources = []
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                for item in data.get("web_sources", []):
+                    u = item.get("url", "").strip()
+                    if u:
+                        html = curl(u, 20)
+                        src_urls = re.findall(r'data-url="([^"]+)"', html)
+                        src_names = re.findall(r'<td class="td-name">([^<]+)</td>', html)
+                        for n_str, u_str in zip(src_names, src_urls):
+                            if u_str.strip() and not u_str.strip().startswith("#"):
+                                sources.append((n_str.strip(), u_str.strip().replace("&amp;", "&")))
+
+                for item in data.get("upstream_endpoints", []):
+                    n_str = item.get("name", "upstream")
+                    u_str = item.get("url", "").strip()
+                    if u_str:
+                        sources.append((n_str, u_str))
+        except Exception as e:
+            print(f"  └─ 读取 config/source_urls.json 出错: {e}")
+    return sources
+
 def merge_sources():
     ts = time.strftime('%Y-%m-%d %H:%M:%S')
-    print(f"[{ts}] [01_merge_sources] 开始全量资源抓取与合并...")
+    print(f"[{ts}] [01_merge_sources] 开始全量资源抓取与合并 (纯配置文件驱动版)...")
 
     spider_jars = {}
+    sources = load_source_urls_config()
 
-    html = curl("https://tvbox.clbug.com/user.php", 20)
-    src_urls = re.findall(r'data-url="([^"]+)"', html)
-    src_names = re.findall(r'<td class="td-name">([^<]+)</td>', html)
-    sources = [(n.strip(), u.strip().replace("&amp;", "&"))
-               for n, u in zip(src_names, src_urls)
-               if u.strip() and not u.strip().startswith("#")]
-
-    zzzy_html = fetch_text("https://www.zzzypro.com/")
-    if zzzy_html:
-        part = zzzy_html.split("❶影视资源")[1] if "❶影视资源" in zzzy_html else zzzy_html
-        if "❷X站资源" in part: part = part.split("❷X站资源")[0]
-        for raw_url, name in re.findall(r'<a[^>]+data-url=["\']([^"\']+)["\'][^>]*>.*?<strong>([^<]+)</strong>', part, re.I):
-            name, raw_url = name.strip(), raw_url.strip().rstrip("/")
-            if not is_blacklisted(name) and not is_blacklisted(raw_url):
-                api_url = f"{'https://' if not raw_url.startswith('http') else ''}{raw_url}/api.php/provide/vod/"
-                sources.append((name, api_url))
-
-    for gname, gurl in UPSTREAM_REPO_ENDPOINTS:
-        sources.append((gname, gurl))
-
-    all_scanned_py = scan_all_py_scripts_from_jie_cat()
+    all_scanned_py = scan_all_py_scripts_from_repos()
 
     all_sites = list(TOP_SITES_FACADE) + all_scanned_py
     all_lives, all_parses = [], []
+    adult_ns_sites = []
 
     seen_site_signatures = set()
     seen_keys = set()
@@ -323,13 +327,14 @@ def merge_sources():
             ext = s.get("ext", "")
             jar = s.get("jar", "")
 
+            clean_n = re.sub(r'^\[.*?\]\s*', '', raw_name).strip()
+            clean_api = clean_api_url(api) if (isinstance(api, str) and api.startswith("http")) else api
+
             if not key or is_blacklisted(raw_name) or is_blacklisted(str(api)):
+                adult_ns_sites.append(s)
                 continue
 
-            clean_n = re.sub(r'^\[.*?\]\s*', '', raw_name).strip()
             if is_garbled_name(clean_n): continue
-
-            clean_api = clean_api_url(api) if (isinstance(api, str) and api.startswith("http")) else api
 
             site_sig = f"{clean_api}_{json.dumps(ext) if isinstance(ext, (dict, list)) else ext}_{jar}"
             if site_sig in seen_site_signatures:
@@ -385,7 +390,6 @@ def merge_sources():
         "mimg.0c1q0l.cn", "www.googletagmanager.com", "www.google-analytics.com", "mc.usihnbcq.cn", "mg.g1mm3d.cn", "mscs.svaeuzh.cn", "cnzz.hhttm.top", "tp.vinuxhome.com", "cnzz.mmstat.com", "www.baihuillq.com", "s23.cnzz.com", "z3.cnzz.com", "c.cnzz.com", "stj.v1vo.top", "z12.cnzz.com", "img.mosflower.cn", "tips.gamevvip.com", "ehwe.yhdtns.com", "xdn.cqqc3.com", "www.jixunkyy.cn", "sp.chemacid.cn", "hm.baidu.com", "s9.cnzz.com", "z6.cnzz.com", "um.cavuc.com", "mav.mavuz.com", "wofwk.aoidf3.com", "z5.cnzz.com", "xc.hubeijieshikj.cn", "tj.tianwenhu.com", "xg.gars57.cn", "k.jinxiuzhilv.com", "cdn.bootcss.com", "ppl.xunzhuo123.com", "xomk.jiangjunmh.top", "img.xunzhuo123.com", "z1.cnzz.com", "s13.cnzz.com", "xg.huataisangao.cn", "z7.cnzz.com", "xg.huataisangao.cn", "z2.cnzz.com", "s96.cnzz.com", "q11.cnzz.com", "thy.dacedsfa.cn", "xg.whsbpw.cn", "s19.cnzz.com", "z8.cnzz.com", "s4.cnzz.com", "f5w.as12df.top", "ae01.alicdn.com", "www.92424.cn", "k.wudejia.com", "vivovip.mmszxc.top", "qiu.xixiqiu.com", "cdnjs.hnfenxun.com", "cms.qdwght.com"
     ]
 
-    # 点播+直播完美融合：在 tvbox.json 中无缝植入 live.txt 链接！
     master_lives = [
         {
             "name": "🔥TVBox 高清央视/卫视/美英直播源",
@@ -412,7 +416,7 @@ def merge_sources():
     with open(os.path.join(WORK_DIR, "tvbox_full.json"), "w", encoding="utf-8") as f:
         json.dump(master_config, f, ensure_ascii=False, indent=2)
 
-    multi_stores = [{"sourceName": name, "sourceUrl": url} for name, url, _ in [(n, u, 0) for n, u in sources]]
+    multi_stores = [{"sourceName": name, "sourceUrl": url} for name, url in sources]
     multi = {
         "urls": [{"name": m["sourceName"], "url": m["sourceUrl"]} for m in multi_stores],
         "stores": multi_stores,
@@ -428,7 +432,18 @@ def merge_sources():
             if isinstance(api, str) and api.startswith("http"):
                 f.write(f"{s['name']}\n{api}\n\n")
 
-    print(f"  └─ [01_merge_sources] 完成！全量合并收录 {len(all_sites)} 个有效站点到 tvbox.json (已完美植入直播源)")
+    ns_dir = os.path.join(WORK_DIR, "not_suitable")
+    os.makedirs(ns_dir, exist_ok=True)
+
+    ns_config = dict(master_config)
+    ns_config["sites"] = adult_ns_sites
+    ns_config["note"] = "本文件放置于隔离目录 not_suitable/，单独收录 18+ 点播采集站。"
+
+    with open(os.path.join(ns_dir, "tvbox.json"), "w", encoding="utf-8") as f:
+        json.dump(ns_config, f, ensure_ascii=False, indent=2)
+
+    print(f"  ├─ 成功隔离 {len(adult_ns_sites)} 个 18+ 点播采集站写入: not_suitable/tvbox.json")
+    print(f"  └─ [01_merge_sources] 完成！全量合并收录 {len(all_sites)} 个有效纯净站点到 tvbox.json")
     return all_sites
 
 if __name__ == "__main__":

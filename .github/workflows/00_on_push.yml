@@ -23,6 +23,7 @@ jobs:
         run: |
           mkdir -p repos
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+          git clone --depth 1 https://github.com/qist/tvbox.git repos/qist || true
           git clone --depth 1 https://github.com/FongMi/CatVodSpider.git repos/CatVodSpider || true
           git clone --depth 1 https://github.com/gaotianliuyun/gao.git repos/gaotianliuyun || true
           git clone --depth 1 https://github.com/laoma2053/awesome-zhuiju-free.git repos/laoma2053 || true
@@ -64,6 +65,7 @@ jobs:
         run: |
           mkdir -p repos process
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+          git clone --depth 1 https://github.com/qist/tvbox.git repos/qist || true
       - name: 运行 04号纯IP与DNS解析 (专干IP)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
@@ -139,6 +141,7 @@ jobs:
         run: |
           mkdir -p repos process
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+          git clone --depth 1 https://github.com/qist/tvbox.git repos/qist || true
       - name: 运行 07号 .py 源码域名静态读取 (专干 PY 源码)
         env: { PYTHONUNBUFFERED: "1" }
         run: |

@@ -1,0 +1,32 @@
+{
+  "repos": [
+    {
+      "name": "qist",
+      "url": "https://github.com/qist/tvbox.git",
+      "paths": ["zb.txt", "ITV.txt", "tvlive.txt", "tvboxtv.txt", "radio.txt", "list.txt", "listx.txt"]
+    },
+    {
+      "name": "iptv-org",
+      "url": "https://github.com/iptv-org/iptv.git",
+      "paths": [
+        "countries/cn.m3u", "countries/hk.m3u", "countries/mo.m3u", "countries/tw.m3u",
+        "countries/us.m3u", "countries/uk.m3u", "countries/au.m3u", "countries/nz.m3u",
+        "countries/ca.m3u", "countries/sg.m3u", "countries/jp.m3u", "countries/kr.m3u",
+        "index.m3u"
+      ]
+    },
+    { "name": "m3u-autoupdate", "url": "https://github.com/4yt1k/m3u-autoupdate.git", "paths": ["output/result.txt", "output/result.m3u"] },
+    { "name": "treewe1", "url": "https://github.com/TREEWE1/iptv-api.git", "paths": ["output/result.txt", "output/user_result.txt"] },
+    { "name": "tyxthl", "url": "https://github.com/tyxthl/iptv-api.git", "paths": ["output/result.txt", "output/result.m3u"] },
+    { "name": "zhibo", "url": "https://github.com/vipxb/zhibo.git", "paths": ["output/result.txt", "output/result.m3u"] },
+    { "name": "yinghuangtv", "url": "https://github.com/yinghuang-xie/yinghuangtv-pro.git", "paths": ["output/result.txt", "output/user_result.txt"] },
+    { "name": "zoharrpg", "url": "https://github.com/zoharrpg/iptv-api.git", "paths": ["output/result.txt", "output/result.m3u"] },
+    { "name": "nihenhao988", "url": "https://github.com/nihenhao988/iptv-api.git", "paths": ["output/result.txt", "output/result.m3u"] },
+    { "name": "larry-biu", "url": "https://github.com/larry-biu/tvbox-config.git", "paths": ["live/live.txt", "live/live.m3u"] },
+    { "name": "laoma2053", "url": "https://github.com/laoma2053/awesome-zhuiju-free.git", "paths": ["resources/resources.json"] },
+    { "name": "cat", "url": "https://github.com/jie20091116/cat.git", "paths": ["TVBOX/PY/"] },
+    { "name": "CatVodSpider", "url": "https://github.com/FongMi/CatVodSpider.git", "paths": ["json/config.json"] },
+    { "name": "gao", "url": "https://github.com/gaotianliuyun/gao.git", "paths": ["js.json"] },
+    { "name": "youhun", "url": "https://github.com/youhunwl/TVAPP.git", "paths": ["main/index.json"] }
+  ]
+}
