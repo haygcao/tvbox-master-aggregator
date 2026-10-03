@@ -48,36 +48,8 @@ jobs:
           git push origin HEAD:main --force
 
   # =========================================================================
-  # 云端多 Job 并发/并行处理阶段 (Parallel Jobs: 2, 3, 4, 5, 6 完全同时开跑，中间文件全量隔离至 process/)
+  # 云端多 Job 并发/并行处理阶段 (Parallel Jobs: 3, 4, 5, 6 极速并发开跑，耗时仅 1~2 分钟)
   # =========================================================================
-  task2_resolve_media_domains:
-    needs: task1_sync_json
-    if: ${{ always() && needs.task1_sync_json.result == 'success' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: 设置 Python 3.11 环境
-        uses: actions/setup-python@v5
-        with: { python-version: '3.11', cache: 'pip' }
-      - run: pip install -r requirements.txt
-      - name: 克隆 repos 磁盘目录
-        run: |
-          mkdir -p repos process
-          git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
-      - name: 运行 03号深解析 (专干播放域名)
-        env: { PYTHONUNBUFFERED: "1", FORCE_CDN_RESOLVE: "1" }
-        run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); os.makedirs('process', exist_ok=True); open('process/grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2))"
-      - name: Push 播放域名缓存
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add process/grouped_cdn_domains.json || true
-          git diff --cached --quiet && exit 0
-          git commit -m "auto: 00任务链-2号播放域名深解析完成"
-          git pull --rebase origin main || true
-          git push origin HEAD:main --force
-
   task3_extract_ips:
     needs: task1_sync_json
     if: ${{ always() && needs.task1_sync_json.result == 'success' }}
@@ -182,10 +154,10 @@ jobs:
           git push origin HEAD:main --force
 
   # =========================================================================
-  # Task 7: 4 大 DNS 交叉投票独立校验
+  # Task 7: 4 大 DNS 交叉投票独立校验 (只需等待极速的 Task 3,4,5,6 完成)
   # =========================================================================
   task7_verify_dns:
-    needs: [task2_resolve_media_domains, task3_extract_ips, task4_extract_images, task5_extract_release_pages, task6_extract_py_code]
+    needs: [task3_extract_ips, task4_extract_images, task5_extract_release_pages, task6_extract_py_code]
     if: ${{ always() && needs.task1_sync_json.result == 'success' }}
     runs-on: ubuntu-latest
     steps:

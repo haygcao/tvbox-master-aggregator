@@ -1,0 +1,41 @@
+name: 02_独立任务：播放域名深解析与物理抓取
+
+on:
+  workflow_dispatch:       # 支持独立手动触发运行
+  schedule:
+    - cron: '0 */12 * * *'  # 每 12 小时独立运行一次
+
+permissions:
+  contents: write
+
+jobs:
+  task2_resolve_media_domains:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: 'pip' }
+
+      - run: pip install -r requirements.txt
+
+      - name: 克隆 repos 磁盘目录
+        run: |
+          mkdir -p repos process
+          git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
+
+      - name: 运行 03号深解析 (独立专干播放域名)
+        env: { PYTHONUNBUFFERED: "1", FORCE_CDN_RESOLVE: "1" }
+        run: |
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); os.makedirs('process', exist_ok=True); open('process/grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2))"
+
+      - name: Push 播放域名缓存至 process/ 隔离目录
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add process/grouped_cdn_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 02号独立任务-播放域名深解析完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force

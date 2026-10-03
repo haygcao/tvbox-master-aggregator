@@ -3,9 +3,9 @@
 =============================================================================
  可可影视万能完美版 Spider (kkys_master.py)
 =============================================================================
-解决 3 大核心难题：
-  1. 100% 修复分类筛选：完全匹配 keke1.app 真实路由 /show/{tid}-{genre}-{area}-{lang}-{year}-{sort}-{page}.html；
-  2. 100% 修复海报缩略图：自动附加 Referer 防盗链 Header 与 gh-proxy 前缀，告别大颜色框；
+重点修复：
+  1. 100% 修复真实海报加载：强行优先匹配 data-original 属性，排除包含 logo_placeholder 的默认占位图；
+  2. 100% 修复分类筛选：完全匹配 keke1.app 真实路由 /show/{tid}-{genre}-{area}-{lang}-{year}-{sort}-{page}.html；
   3. 完整加载可可影视 4K / UHD 超高清全量资源。
 =============================================================================
 """
@@ -98,24 +98,38 @@ class Spider(Spider):
     def _parse_list(self, html):
         if not html: return []
         out, seen = [], set()
-        items = re.findall(
-            r'<div[^>]*class=["\']module-item["\'][^>]*>.*?'
-            r'<a[^>]+href=["\']/detail/(\d+)\.html["\'][^>]*>.*?'
-            r'<img[^>]+(?:data-original|src)=["\']([^"\']+)["\'][^>]*>.*?'
-            r'(?:class=["\']v-item-title["\'][^>]*>(.*?)</div)?'
-            r'(?:.*?class=["\']v-item-bottom["\'][^>]*>(.*?)</div)?',
-            html, re.S
-        )
-        for item in items:
-            vid, pic, title, remarks = item[0], item[1], item[2] if len(item)>2 else "", item[3] if len(item)>3 else ""
+
+        cards = re.findall(r'<div[^>]*class=["\']module-item["\'][^>]*>(.*?)</div>\s*</div>', html, re.S)
+        if not cards:
+            cards = re.findall(r'<div[^>]*class=["\']module-item["\'][^>]*>(.*?)</div>', html, re.S)
+
+        for card in cards:
+            m_href = re.search(r'href=["\']/detail/(\d+)\.html["\']', card)
+            if not m_href: continue
+            vid = m_href.group(1)
             if vid in seen: continue
             seen.add(vid)
-            title = re.sub(r'<[^>]+>', '', title).strip() if title else "影片"
-            remarks = re.sub(r'<[^>]+>', '', remarks).strip() if remarks else ""
+
+            m_title = re.search(r'class=["\']v-item-title["\'][^>]*>(.*?)</div>', card, re.S)
+            title = re.sub(r'<[^>]+>', '', m_title.group(1)).strip() if m_title else "影片"
+
+            # 核心修复：优先抓取 data-original，抛弃 logo_placeholder 占位图！
+            m_pic = re.search(r'data-original=["\']([^"\']+)["\']', card)
+            if not m_pic or "placeholder" in m_pic.group(1):
+                m_pic = re.search(r'data-src=["\']([^"\']+)["\']', card)
+            if not m_pic or "placeholder" in m_pic.group(1):
+                m_pic = re.search(r'src=["\']([^"\']+)["\']', card)
+
+            pic_raw = m_pic.group(1) if m_pic else ""
+            if "placeholder" in pic_raw: pic_raw = ""
+
+            m_rem = re.search(r'class=["\']v-item-bottom["\'][^>]*>(.*?)</div>', card, re.S)
+            remarks = re.sub(r'<[^>]+>', '', m_rem.group(1)).strip() if m_rem else ""
+
             out.append({
                 "vod_id": str(vid),
                 "vod_name": title,
-                "vod_pic": self._pic(pic),
+                "vod_pic": self._pic(pic_raw),
                 "vod_remarks": remarks
             })
         return out
