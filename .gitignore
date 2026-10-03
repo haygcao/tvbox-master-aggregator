@@ -1,5 +1,7 @@
-__pycache__/
 *.pyc
+__pycache__/
 .DS_Store
-.idea/
-.vscode/
+/*.json
+!tvbox.json
+!tvbox_full.json
+!tvbox_multi.json
