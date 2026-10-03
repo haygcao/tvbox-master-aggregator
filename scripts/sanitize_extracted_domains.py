@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本：全量域名与数据强力净化清洗器 (sanitize_extracted_domains.py)
+ 独立脚本：全量域名与数据强力净化清洗器 (中间过程文件统一写入 process/ 目录)
 =============================================================================
-重点清洗：
-  1. 100% 强行擦除所有反斜杠 \\ (把 kissjav\\.li 强行净化为 kissjav.li, 把 djj88\\.sbs 净化为 djj88.sbs)；
-  2. 100% 强行剔除纯文件后缀 (如 .json, .txt, .m3u8, .ts, .php, .js, .css)；
-  3. 100% 强行剔除开头的点 .、引号、空格或格式损坏的字符串；
-  4. 100% 强行隔离 t.me, google.com, github.com 等强制代理域名；
-  5. 输出 sanitized_candidate_domains.json 供后续流程无瑕调用。
+重点清洗与修复：
+  1. 过程文件统一隔离写入 process/ 目录，根目录仅展示最终结果文件；
+  2. 彻底剥离 #, ?, &, %, &amp;, ; 等 URL 查询参数与锚点，绝不留存 nxog.top?mm=328 或 qzz.io?format=2；
+  3. 彻底绝杀只有后缀没有前缀的垃圾域名 (如 .com) 以及含有 .mp4#, com#.mp4 的无面脏字符串；
+  4. 100% 强行擦除反斜杠 \\, 单/双斜杠转义；
+  5. 输出 process/sanitized_candidate_domains.json 与 process/sanitized_proxy_domains.json。
 =============================================================================
 """
 
@@ -18,6 +18,8 @@ import re
 import json
 
 WORK_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROCESS_DIR = os.path.join(WORK_DIR, "process")
+os.makedirs(PROCESS_DIR, exist_ok=True)
 
 GLOBAL_PROXY_DOMAINS = [
     "google.com", "googlesyndication.com", "googletagmanager.com",
@@ -28,8 +30,14 @@ GLOBAL_PROXY_DOMAINS = [
 ]
 
 INVALID_FILE_EXTENSIONS = [
-    "json", "txt", "m3u8", "ts", "js", "css", "html", "htm", "png", "jpg", "jpeg", "webp", "php"
+    "json", "txt", "m3u8", "ts", "js", "css", "html", "htm", "png", "jpg", "jpeg", "webp", "php", "mp4", "mkv", "flv"
 ]
+
+KNOWN_TLDS = {
+    "com", "net", "org", "cn", "cc", "top", "tv", "xyz", "icu", "site", "info", "me", "vip", "app",
+    "co", "uk", "jp", "kr", "hk", "tw", "la", "fun", "run", "in", "club", "live", "store", "buzz",
+    "pub", "space", "dev", "tech", "io", "art", "shop", "online", "ink", "work", "life", "world"
+}
 
 def to_punycode_domain(dom_str):
     if not dom_str or not isinstance(dom_str, str): return None
@@ -45,38 +53,50 @@ def sanitize_domain_string(raw_dom):
     if not raw_dom or not isinstance(raw_dom, str):
         return None, False
 
-    # 1. 强行擦除反斜杠 \\、单斜杠转义 \\/ 与空字符
-    clean = str(raw_dom).replace('\\/', '/').replace('\\', '').split("|")[0].split("$")[0].strip()
-    if clean.startswith("//"): clean = clean[2:]
-    clean = clean.strip("@|*^ \t\r\n'\"").lower()
+    # 1. 彻底切掉 #, ?, &, %, &amp;, ; 等 URL 参数与锚点杂质
+    clean = str(raw_dom).replace('&amp;', '&').replace('\\/', '/').replace('\\', '').strip()
+    clean = clean.split('#')[0].split('?')[0].split('&')[0].split(';')[0].split('%')[0].split('|')[0].split('$')[0].strip()
 
-    # 2. 剔除开头的点与纯文件后缀
+    # 2. 擦除协议头与双斜杠
+    clean = re.sub(r'^https?://', '', clean, flags=re.I)
+    clean = re.sub(r'^//', '', clean)
+
+    # 3. 擦除所有残存的单斜杠 /、双斜杠 // 与反斜杠 \
+    clean = clean.replace('/', '').replace('\\', '').strip()
+
+    # 4. 剥离端口号与特殊符号
+    clean = clean.split(":")[0].strip("@|*^ \t\r\n'\"").lower()
+
+    # 5. 校验格式：绝不输出开头的点、无前缀纯后缀 (如 .com)、或带有 #/mp4 等垃圾串
     if not clean or clean.startswith(".") or "." not in clean:
         return None, False
 
-    if clean in INVALID_FILE_EXTENSIONS:
+    parts = clean.split(".")
+    # 如果只有 1 个点且左边为空 (如 .com) ➔ 判定为垃圾脏数据直接剔除！
+    if len(parts) < 2 or not parts[0] or not parts[-1]:
         return None, False
 
-    # 提取真正的主域名部分
-    parts = clean.split("/")[0].split(":")[0].strip()
-    if parts.startswith("."): parts = parts[1:]
+    tld = parts[-1].lower()
+    prefix = parts[0].lower()
 
-    if not parts or parts.replace('.', '').isdigit() or "." not in parts or parts in INVALID_FILE_EXTENSIONS:
+    if tld in INVALID_FILE_EXTENSIONS or prefix in INVALID_FILE_EXTENSIONS:
         return None, False
 
-    # 判定是否属于代理域名
-    if is_global_proxy_domain(parts):
-        return parts, True  # 属于代理
+    if is_global_proxy_domain(clean):
+        return clean, True
 
-    return parts, False  # 属于直连候选
+    return clean, False
 
 def process_data_sanitization():
-    print("  [数据强力清洗器] 正在对 Task 2~6 汇集的所有原始域名执行 4 重强力净化...", flush=True)
+    print("  [数据强力清洗器] 正在对 Task 2~6 汇集的所有原始域名执行强力净化 (过程文件隔离写入 process/)...", flush=True)
 
     raw_candidates = set()
 
     for json_file in ["grouped_cdn_domains.json", "extracted_release_page_domains.json", "extracted_py_code_domains.json", "dynamic_image_domains.json"]:
-        fpath = os.path.join(WORK_DIR, json_file)
+        fpath = os.path.join(PROCESS_DIR, json_file)
+        if not os.path.exists(fpath):
+            fpath = os.path.join(WORK_DIR, json_file)
+
         if os.path.exists(fpath):
             try:
                 with open(fpath, "r", encoding="utf-8") as f:
@@ -104,10 +124,10 @@ def process_data_sanitization():
     sorted_direct = sorted(list(sanitized_direct_candidates))
     sorted_proxy = sorted(list(sanitized_proxy_candidates))
 
-    open(os.path.join(WORK_DIR, "sanitized_candidate_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted_direct, ensure_ascii=False, indent=2))
-    open(os.path.join(WORK_DIR, "sanitized_proxy_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted_proxy, ensure_ascii=False, indent=2))
+    open(os.path.join(PROCESS_DIR, "sanitized_candidate_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted_direct, ensure_ascii=False, indent=2))
+    open(os.path.join(PROCESS_DIR, "sanitized_proxy_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted_proxy, ensure_ascii=False, indent=2))
 
-    print(f"  └─ 强力清洗完成！净化出直连候选域名: {len(sorted_direct)}个, 隔离代理域名: {len(sorted_proxy)}个", flush=True)
+    print(f"  └─ 强力清洗完成！净化出直连候选域名: {len(sorted_direct)}个, 隔离代理域名: {len(sorted_proxy)}个 (过程文件已存入 process/)", flush=True)
 
 if __name__ == "__main__":
     process_data_sanitization()

@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本九：策略导出器 (Task 9: 纯格式化写入，0 网络耗时，0.1 秒极速完成)
+ 独立脚本：策略导出器 (过程文件隔离读取 process/ 目录，根目录仅展示最终结果文件)
 =============================================================================
-功能：
-  1. 纯粹读取 Task 8 强力清洗拦截后的 sanitized_candidate_domains.json 与 sanitized_proxy_domains.json；
-  2. 纯粹读取 Task 3 提取好的 extracted_ip_addresses.json 纯 IP；
-  3. 执行历史增量累加 (set.union)；
-  4. 0.1 秒纯内存格式化输出 Clash, PassWall 与 AdGuard 直连与代理规则。
+重点更新：
+  1. 过程文件统一隔离读取 process/ 目录，根目录仅输出 PassWall / AdGuard / Clash 最终规则文件；
+  2. 彻底切掉 #, ?, &, %, &amp;, ; 等 URL 参数与锚点杂质 (绝对不留存 nxog.top?mm=328 或 qzz.io?format=2)；
+  3. 彻底绝杀只有后缀没有前缀的垃圾域名 (如 .com) 以及包含 .mp4#, com#.mp4 的无面脏字符串；
+  4. 0.1 秒纯内存格式化输出最终规则集。
 =============================================================================
 """
 
@@ -22,14 +22,51 @@ try:
 except ImportError:
     TLD_EXTRACTOR = None
 
+WORK_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROCESS_DIR = os.path.join(WORK_DIR, "process")
+
 INVALID_FILE_EXTENSIONS = [
-    "json", "txt", "m3u8", "ts", "js", "css", "html", "htm", "png", "jpg", "jpeg", "webp", "php"
+    "json", "txt", "m3u8", "ts", "js", "css", "html", "htm", "png", "jpg", "jpeg", "webp", "php", "mp4", "mkv", "flv"
 ]
 
 def to_punycode_domain(dom_str):
     if not dom_str or not isinstance(dom_str, str): return None
     try: return dom_str.encode("idna").decode("ascii")
     except Exception: return dom_str
+
+def final_clean_before_write(dom):
+    """写盘前最后一关：100% 剥离 #, ?, &, %, &amp;, 协议头与无面脏数据"""
+    if not dom or not isinstance(dom, str): return None
+
+    # 1. 彻底切掉 #, ?, &, %, &amp;, ; 等 URL 参数与锚点杂质
+    clean = str(dom).replace('&amp;', '&').replace('\\/', '/').replace('\\', '').strip()
+    clean = clean.split('#')[0].split('?')[0].split('&')[0].split(';')[0].split('%')[0].split('|')[0].split('$')[0].strip()
+
+    # 2. 擦除协议头与双斜杠
+    clean = re.sub(r'^https?://', '', clean, flags=re.I)
+    clean = re.sub(r'^//', '', clean)
+
+    # 3. 擦除所有残存的单斜杠 /、双斜杠 // 与反斜杠 \
+    clean = clean.replace('/', '').replace('\\', '').strip()
+
+    # 4. 剥离端口号与特殊符号
+    clean = clean.split(":")[0].strip("@|*^ \t\r\n'\"").lower()
+
+    # 5. 滤掉纯文件后缀、无前缀纯后缀 (如 .com) 与垃圾杂质
+    if not clean or clean.startswith(".") or "." not in clean:
+        return None
+
+    parts = clean.split(".")
+    if len(parts) < 2 or not parts[0] or not parts[-1]:
+        return None
+
+    tld = parts[-1].lower()
+    prefix = parts[0].lower()
+
+    if tld in INVALID_FILE_EXTENSIONS or prefix in INVALID_FILE_EXTENSIONS:
+        return None
+
+    return clean
 
 def read_existing_historical_rules(file_path):
     existing = set()
@@ -40,58 +77,65 @@ def read_existing_historical_rules(file_path):
                     line = line.strip()
                     if line and not line.startswith("#") and not line.startswith("!") and not line.startswith("payload:"):
                         clean_item = re.sub(r'^(?:@@\|\||- DOMAIN-SUFFIX,|- IP-CIDR,)\s*', '', line).rstrip("^/32").strip()
-                        clean_item = clean_item.replace('\\/', '/').replace('\\', '')
-                        if clean_item and clean_item not in INVALID_FILE_EXTENSIONS:
-                            existing.add(clean_item)
+                        final_item = final_clean_before_write(clean_item)
+                        if final_item: existing.add(final_item)
         except Exception: pass
     return existing
 
 def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
-    print("  [Task 9: 策略导出器] 正在执行纯格式化写入 (0.1 秒极速完成)...", flush=True)
+    print("  [Task 9: 策略导出器] 正在从 process/ 读取数据并执行写盘前最后一关 100% 擦除导出...", flush=True)
 
-    sanitized_direct_path = os.path.join(work_dir, "sanitized_candidate_domains.json")
-    sanitized_proxy_path = os.path.join(work_dir, "sanitized_proxy_domains.json")
+    sanitized_direct_path = os.path.join(PROCESS_DIR, "sanitized_candidate_domains.json")
+    sanitized_proxy_path = os.path.join(PROCESS_DIR, "sanitized_proxy_domains.json")
+    verified_direct_path = os.path.join(PROCESS_DIR, "verified_direct_domains.json")
+    verified_proxy_path = os.path.join(PROCESS_DIR, "verified_proxy_domains.json")
 
     direct_domains = set()
     proxy_domains = set()
 
-    if os.path.exists(sanitized_direct_path):
-        try: direct_domains.update(json.load(open(sanitized_direct_path)))
-        except Exception: pass
+    for p in [sanitized_direct_path, verified_direct_path]:
+        if os.path.exists(p):
+            try: direct_domains.update(json.load(open(p)))
+            except Exception: pass
 
-    if os.path.exists(sanitized_proxy_path):
-        try: proxy_domains.update(json.load(open(sanitized_proxy_path)))
-        except Exception: pass
-
-    # 兜底读取 Task 7 校验文件
-    verified_direct_path = os.path.join(work_dir, "verified_direct_domains.json")
-    if os.path.exists(verified_direct_path):
-        try: direct_domains.update(json.load(open(verified_direct_path)))
-        except Exception: pass
+    for p in [sanitized_proxy_path, verified_proxy_path]:
+        if os.path.exists(p):
+            try: proxy_domains.update(json.load(open(p)))
+            except Exception: pass
 
     # 读取历史规则增量累加
     hist_direct_path = os.path.join(work_dir, "domains_direct.txt")
     historical_items = read_existing_historical_rules(hist_direct_path)
 
+    # 读取 process/extracted_ip_addresses.json
+    process_ip_path = os.path.join(PROCESS_DIR, "extracted_ip_addresses.json")
+    if os.path.exists(process_ip_path):
+        try:
+            ips = json.load(open(process_ip_path))
+            if isinstance(ips, list): extracted_ips = (extracted_ips or []) + ips
+        except Exception: pass
+
     pure_ips = set(extracted_ips or [])
     for h in historical_items:
         if h.replace('.', '').isdigit(): pure_ips.add(h)
         else:
-            if h not in INVALID_FILE_EXTENSIONS and not h.startswith("."):
-                direct_domains.add(h)
+            final_h = final_clean_before_write(h)
+            if final_h: direct_domains.add(final_h)
 
-    def expand_punycode_list(raw_list):
+    def expand_and_final_clean(raw_list):
         expanded = set()
         for dom in (raw_list or []):
-            if dom and dom not in INVALID_FILE_EXTENSIONS and not str(dom).startswith("."):
-                clean_dom = str(dom).replace('\\/', '/').replace('\\', '').strip()
-                expanded.add(clean_dom)
-                puny = to_punycode_domain(clean_dom)
-                if puny and puny != clean_dom: expanded.add(puny)
+            final_dom = final_clean_before_write(dom)
+            if final_dom:
+                expanded.add(final_dom)
+                puny = to_punycode_domain(final_dom)
+                if puny:
+                    final_puny = final_clean_before_write(puny)
+                    if final_puny: expanded.add(final_puny)
         return sorted(list(expanded))
 
-    sorted_direct_doms = expand_punycode_list(direct_domains)
-    sorted_proxy_doms = expand_punycode_list(proxy_domains)
+    sorted_direct_doms = expand_and_final_clean(direct_domains)
+    sorted_proxy_doms = expand_and_final_clean(proxy_domains)
     sorted_ips = sorted(list(pure_ips))
 
     # 1. 导出 PassWall / SmartDNS 直连列表 (domains_direct.txt)
@@ -100,7 +144,9 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# TVBox 视频源、发布页镜像、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
         f.write("# =========================================================\n\n")
         f.write("# ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
-        for d in sorted_direct_doms: f.write(f"{d}\n")
+        for d in sorted_direct_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"{final_d}\n")
         f.write("\n")
         if sorted_ips:
             f.write("# ===== 分组: 02_视频切片纯IPv4地址 =====\n")
@@ -113,7 +159,9 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("! OpenWrt AdGuard Home TVBox 视频源、发布页镜像、中文 Punycode 与纯IP 放行白名单\n")
         f.write("! =========================================================\n\n")
         f.write("! ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
-        for d in sorted_direct_doms: f.write(f"@@||{d}^\n")
+        for d in sorted_direct_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"@@||{final_d}^\n")
         f.write("\n")
         if sorted_ips:
             f.write("! ===== 分组: 02_视频切片纯IPv4地址 =====\n")
@@ -127,7 +175,9 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# =========================================================\n")
         f.write("payload:\n")
         f.write("  # ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
-        for d in sorted_direct_doms: f.write(f"  - DOMAIN-SUFFIX,{d}\n")
+        for d in sorted_direct_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"  - DOMAIN-SUFFIX,{final_d}\n")
         if sorted_ips:
             f.write("  # ===== 分组: 02_视频切片纯IPv4地址 =====\n")
             for ip in sorted_ips: f.write(f"  - IP-CIDR,{ip}/32\n")
@@ -135,19 +185,25 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     # 4. 导出强制代理规则列表
     with open(os.path.join(work_dir, "domains_proxy.txt"), "w", encoding="utf-8") as f:
         f.write("# TVBox 强制代理域名列表 (含国内被墙/被阻断节点)\n")
-        for d in sorted_proxy_doms: f.write(f"{d}\n")
+        for d in sorted_proxy_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"{final_d}\n")
 
     with open(os.path.join(work_dir, "adguard_proxy.txt"), "w", encoding="utf-8") as f:
         f.write("! OpenWrt AdGuard Home 强制代理域名放行规则\n")
-        for d in sorted_proxy_doms: f.write(f"@@||{d}^\n")
+        for d in sorted_proxy_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"@@||{final_d}^\n")
 
     with open(os.path.join(work_dir, "clash_rules_proxy.yaml"), "w", encoding="utf-8") as f:
         f.write("# TVBox 强制代理 Clash 规则集\npayload:\n")
-        for d in sorted_proxy_doms: f.write(f"  - DOMAIN-SUFFIX,{d}\n")
+        for d in sorted_proxy_doms:
+            final_d = final_clean_before_write(d)
+            if final_d: f.write(f"  - DOMAIN-SUFFIX,{final_d}\n")
 
-    print(f"  ├─ 极速导出 PassWall 直连列表: domains_direct.txt ({len(sorted_direct_doms)}条域名, {len(sorted_ips)}条IP)")
-    print(f"  ├─ 极速导出 AdGuard Home 放行白名单: adguard_direct.txt")
-    print(f"  └─ 极速导出 Clash 规则集: clash_rules_direct.yaml")
+    print(f"  ├─ 终极极速导出 PassWall 直连列表: domains_direct.txt ({len(sorted_direct_doms)}条纯净域名, {len(sorted_ips)}条IP)")
+    print(f"  ├─ 终极极速导出 AdGuard Home 放行白名单: adguard_direct.txt")
+    print(f"  └─ 终极极速导出 Clash 规则集: clash_rules_direct.yaml (过程文件隔离存放于 process/)")
 
 def export_all_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
     return export_grouped_router_rules(work_dir, sites, deep_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)

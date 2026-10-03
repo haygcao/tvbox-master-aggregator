@@ -41,14 +41,14 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add tvbox.json tvbox_full.json tvbox_multi.json sources.txt live.txt not_suitable/ || true
+          git add tvbox.json tvbox_full.json tvbox_multi.json sources.txt live.txt not_suitable/ process/ || true
           git diff --cached --quiet && echo "JSON 无变更，跳过提交" && exit 0
           git commit -m "auto: 00任务链-第一步JSON同步完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
           git pull --rebase origin main || true
           git push origin HEAD:main --force
 
   # =========================================================================
-  # 云端多 Job 并发/并行处理阶段 (Parallel Jobs: 2, 3, 4, 5, 6 完全同时开跑)
+  # 云端多 Job 并发/并行处理阶段 (Parallel Jobs: 2, 3, 4, 5, 6 完全同时开跑，中间文件全量隔离至 process/)
   # =========================================================================
   task2_resolve_media_domains:
     needs: task1_sync_json
@@ -62,17 +62,17 @@ jobs:
       - run: pip install -r requirements.txt
       - name: 克隆 repos 磁盘目录
         run: |
-          mkdir -p repos
+          mkdir -p repos process
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
       - name: 运行 03号深解析 (专干播放域名)
         env: { PYTHONUNBUFFERED: "1", FORCE_CDN_RESOLVE: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); open('grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.resolve_deep_cdn import resolve_deep_media_domains; sites = merge_sources(); g_doms = resolve_deep_media_domains(sites, max_sites=len(sites)); os.makedirs('process', exist_ok=True); open('process/grouped_cdn_domains.json', 'w').write(json.dumps(g_doms, default=list, ensure_ascii=False, indent=2))"
       - name: Push 播放域名缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add grouped_cdn_domains.json || true
+          git add process/grouped_cdn_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-2号播放域名深解析完成"
           git pull --rebase origin main || true
@@ -90,17 +90,17 @@ jobs:
       - run: pip install -r requirements.txt
       - name: 克隆 repos 磁盘目录
         run: |
-          mkdir -p repos
+          mkdir -p repos process
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
       - name: 运行 04号纯IP与DNS解析 (专干IP)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; sites = merge_sources(); pure_ips = extract_ip_addresses_and_dns(sites, {}); open('extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_ip_addresses import extract_ip_addresses_and_dns; sites = merge_sources(); pure_ips = extract_ip_addresses_and_dns(sites, {}); os.makedirs('process', exist_ok=True); open('process/extracted_ip_addresses.json', 'w').write(json.dumps(pure_ips, ensure_ascii=False, indent=2))"
       - name: Push 纯IP缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add extracted_ip_addresses.json || true
+          git add process/extracted_ip_addresses.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-3号纯IP解析完成"
           git pull --rebase origin main || true
@@ -119,12 +119,12 @@ jobs:
       - name: 运行 05号海报图片 CDN 扒取 (专干图片)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_image_domains import extract_all_poster_image_domains; sites = merge_sources(); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); open('dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.extract_image_domains import extract_all_poster_image_domains; sites = merge_sources(); img_doms = extract_all_poster_image_domains(sites, max_sites=len(sites)); os.makedirs('process', exist_ok=True); open('process/dynamic_image_domains.json', 'w').write(json.dumps(img_doms, ensure_ascii=False, indent=2))"
       - name: Push 海报图片缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add dynamic_image_domains.json || true
+          git add process/dynamic_image_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-4号海报图片CDN扒取完成"
           git pull --rebase origin main || true
@@ -143,12 +143,12 @@ jobs:
       - name: 运行 06号通用发布页镜像扒取 (专干发布页)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_release_page_domains import extract_all_release_page_domains; rel_doms = extract_all_release_page_domains(); open('extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_release_page_domains import extract_all_release_page_domains; rel_doms = extract_all_release_page_domains(); os.makedirs('process', exist_ok=True); open('process/extracted_release_page_domains.json', 'w').write(json.dumps(rel_doms, ensure_ascii=False, indent=2))"
       - name: Push 发布页缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add extracted_release_page_domains.json || true
+          git add process/extracted_release_page_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-5号发布页镜像扒取完成"
           git pull --rebase origin main || true
@@ -165,17 +165,17 @@ jobs:
         with: { python-version: '3.11' }
       - name: 克隆 repos 磁盘目录
         run: |
-          mkdir -p repos
+          mkdir -p repos process
           git clone --depth 1 https://github.com/jie20091116/cat.git repos/cat || true
       - name: 运行 07号 .py 源码域名静态读取 (专干 PY 源码)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
-          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_py_code_domains import extract_all_py_code_domains; py_doms = extract_all_py_code_domains(); open('extracted_py_code_domains.json', 'w').write(json.dumps(py_doms, ensure_ascii=False, indent=2))"
+          python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.extract_py_code_domains import extract_all_py_code_domains; py_doms = extract_all_py_code_domains(); os.makedirs('process', exist_ok=True); open('process/extracted_py_code_domains.json', 'w').write(json.dumps(py_doms, ensure_ascii=False, indent=2))"
       - name: Push PY 源码域名缓存
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add extracted_py_code_domains.json || true
+          git add process/extracted_py_code_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-6号PY源码域名读取完成"
           git pull --rebase origin main || true
@@ -203,7 +203,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add verified_direct_domains.json verified_proxy_domains.json || true
+          git add process/verified_direct_domains.json process/verified_proxy_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-7号 DNS 交叉投票校验完成"
           git pull --rebase origin main || true
@@ -230,7 +230,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add sanitized_candidate_domains.json sanitized_proxy_domains.json || true
+          git add process/sanitized_candidate_domains.json process/sanitized_proxy_domains.json || true
           git diff --cached --quiet && exit 0
           git commit -m "auto: 00任务链-8号数据强力净化清洗完成"
           git pull --rebase origin main || true

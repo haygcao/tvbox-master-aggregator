@@ -2,13 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本七：3 大国内 DNS + Cloudflare 交叉投票 DNS 可达性校验器 (verify_domestic_dns.py)
-=============================================================================
-功能：
-  1. 独立读取 Task 2~6 汇集的候选域名；
-  2. 30 线程并发向 3 大国内 DNS (阿里 223.5.5.5 / 腾讯 119.29.29.29 / 114DNS 114.114.114.114) + Cloudflare (1.1.1.1) 发起交叉查询；
-  3. 判定：Cloudflare 正常但国内 2 个以上 DNS 解析空/GWP 污染 IP ➔ 判定为【国内被墙阻断】(如 huangguoai.com)；
-  4. 分别输出 verified_direct_domains.json 与 verified_proxy_domains.json。
+ 独立脚本七：3 大国内 DNS + Cloudflare 交叉投票 DNS 可达性校验器 (process/ 路径版)
 =============================================================================
 """
 
@@ -28,6 +22,8 @@ HEADERS = {
 }
 
 WORK_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROCESS_DIR = os.path.join(WORK_DIR, "process")
+os.makedirs(PROCESS_DIR, exist_ok=True)
 
 GLOBAL_PROXY_DOMAINS = [
     "google.com", "googlesyndication.com", "googletagmanager.com",
@@ -78,8 +74,11 @@ def process_dns_verification():
 
     candidate_domains = set()
 
-    for json_file in ["grouped_cdn_domains.json", "extracted_release_page_domains.json", "extracted_py_code_domains.json", "dynamic_image_domains.json"]:
-        fpath = os.path.join(WORK_DIR, json_file)
+    for json_file in ["grouped_cdn_domains.json", "extracted_release_page_domains.json", "extracted_py_code_domains.json", "dynamic_image_domains.json", "sanitized_candidate_domains.json"]:
+        fpath = os.path.join(PROCESS_DIR, json_file)
+        if not os.path.exists(fpath):
+            fpath = os.path.join(WORK_DIR, json_file)
+
         if os.path.exists(fpath):
             try:
                 with open(fpath, "r", encoding="utf-8") as f:
@@ -103,10 +102,10 @@ def process_dns_verification():
             else:
                 verified_proxy.add(dom)
 
-    open(os.path.join(WORK_DIR, "verified_direct_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_direct)), ensure_ascii=False, indent=2))
-    open(os.path.join(WORK_DIR, "verified_proxy_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_proxy)), ensure_ascii=False, indent=2))
+    open(os.path.join(PROCESS_DIR, "verified_direct_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_direct)), ensure_ascii=False, indent=2))
+    open(os.path.join(PROCESS_DIR, "verified_proxy_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_proxy)), ensure_ascii=False, indent=2))
 
-    print(f"  └─ DNS 独立校验完成！通过校验直连: {len(verified_direct)}个, 判定被墙代理: {len(verified_proxy)}个", flush=True)
+    print(f"  └─ DNS 独立校验完成！通过校验直连: {len(verified_direct)}个, 判定被墙代理: {len(verified_proxy)}个 (保存至 process/)", flush=True)
 
 if __name__ == "__main__":
     process_dns_verification()
