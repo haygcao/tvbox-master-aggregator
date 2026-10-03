@@ -13,8 +13,9 @@
   06. scripts/extract_release_page_domains.py       : 通用发布页镜像与 Punycode 动态扒取 (专干发布页)
   07. scripts/extract_py_code_domains.py            : .py 爬虫源码内部域名静态提取 (专干 PY 源码)
   08. scripts/verify_domestic_dns.py               : 3 大国内 DNS + Cloudflare 交叉投票校验 (专干 DNS 校验)
-  09. scripts/export_router_rules.py                : 路由器与 AdGuard 放行规则导出 (专干 0.1s 纯格式化导出)
-  10. scripts/merge_iptv_split_18.py                : 美英学英语 IPTV 整合与 not_suitable/ 隔离
+  09. scripts/sanitize_extracted_domains.py        : 域名强力净化清洗与代理拦截 (专干最终清洗)
+  10. scripts/export_router_rules.py                : 路由器与 AdGuard 放行规则导出 (专干 0.1s 纯格式化导出)
+  11. scripts/merge_iptv_split_18.py                : 美英学英语 IPTV 整合与 not_suitable/ 隔离
 =============================================================================
 """
 
@@ -32,8 +33,9 @@ from scripts import extract_image_domains as step5
 from scripts import extract_release_page_domains as step6
 from scripts import extract_py_code_domains as step7
 from scripts import verify_domestic_dns as step8
-from scripts import export_router_rules as step9
-from scripts import merge_iptv_split_18 as step10
+from scripts import sanitize_extracted_domains as step9
+from scripts import export_router_rules as step10
+from scripts import merge_iptv_split_18 as step11
 
 def main():
     ts = time.strftime('%Y-%m-%d %H:%M:%S')
@@ -64,11 +66,14 @@ def main():
     # 8. 运行独立任务八：3 大国内 DNS + Cloudflare 交叉投票校验 (专干 DNS 校验)
     step8.process_dns_verification()
 
-    # 9. 运行独立任务九：策略导出 (AdGuard / PassWall / Clash)
-    step9.export_all_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)
+    # 9. 运行独立任务九：全量域名强力净化清洗与代理拦截 (专干最终清洗)
+    step9.process_data_sanitization()
 
-    # 10. 运行独立任务十：美英学英语 IPTV 整合与 not_suitable/ 隔离导出
-    step10.process_iptv_and_split_18()
+    # 10. 运行独立任务十：策略导出 (AdGuard / PassWall / Clash)
+    step10.export_all_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains, extracted_ips, release_page_domains, py_code_domains)
+
+    # 11. 运行独立任务十一：美英学英语 IPTV 整合与 not_suitable/ 隔离导出
+    step11.process_iptv_and_split_18()
 
     print(f"\n[{time.strftime('%Y-%m-%d %H:%M:%S')}] ===== TVBox 模块化管道更新全部成功完成! =====")
 

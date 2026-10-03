@@ -32,7 +32,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_sources.py
 
-      - name: 运行 10_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
+      - name: 运行 11_merge_iptv 独立任务 (美英学英语与 not_suitable 隔离)
         env:
           PYTHONUNBUFFERED: "1"
         run: python3 scripts/merge_iptv_split_18.py || true
@@ -182,7 +182,7 @@ jobs:
           git push origin HEAD:main --force
 
   # =========================================================================
-  # Task 7: 4 大 DNS 交叉投票独立校验 (等待 Task 2,3,4,5,6 并行跑完后执行)
+  # Task 7: 4 大 DNS 交叉投票独立校验
   # =========================================================================
   task7_verify_dns:
     needs: [task2_resolve_media_domains, task3_extract_ips, task4_extract_images, task5_extract_release_pages, task6_extract_py_code]
@@ -210,21 +210,48 @@ jobs:
           git push origin HEAD:main --force
 
   # =========================================================================
-  # Task 8: 规则格式化统一导出 (等待 Task 7 校验完成后 0.1 秒纯内存写盘导出)
+  # Task 8: 全量域名强力净化清洗与代理拦截 (专干 Task 8 最终数据强力清洗)
   # =========================================================================
-  task8_export_rules:
+  task8_sanitize_domains:
     needs: task7_verify_dns
     if: ${{ always() && needs.task7_verify_dns.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 拉取最新校验缓存
+      - name: 拉取最新 DNS 校验结果
+        run: git pull --rebase origin main || true
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: 运行 09号 全量数据强力净化清洗与代理拦截 (专干 Task 8 数据清洗)
+        env: { PYTHONUNBUFFERED: "1" }
+        run: python3 scripts/sanitize_extracted_domains.py
+      - name: Push 清洗净化结果
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add sanitized_candidate_domains.json sanitized_proxy_domains.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "auto: 00任务链-8号数据强力净化清洗完成"
+          git pull --rebase origin main || true
+          git push origin HEAD:main --force
+
+  # =========================================================================
+  # Task 9: 规则格式化统一导出 (等待 Task 8 清洗完成后 0.1 秒纯内存写盘导出)
+  # =========================================================================
+  task9_export_rules:
+    needs: task8_sanitize_domains
+    if: ${{ always() && needs.task8_sanitize_domains.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 拉取最新清洗后缓存
         run: git pull --rebase origin main || true
       - name: 设置 Python 3.11 环境
         uses: actions/setup-python@v5
         with: { python-version: '3.11', cache: 'pip' }
       - run: pip install -r requirements.txt
-      - name: 运行 09 号规则导出任务 (专干 0.1s 纯格式化导出)
+      - name: 运行 10 号规则导出任务 (专干 Task 9 0.1s 纯格式化导出)
         env: { PYTHONUNBUFFERED: "1" }
         run: |
           python3 -c "import sys, os, json; sys.path.append('scripts'); from scripts.merge_sources import merge_sources; from scripts.export_router_rules import export_all_router_rules; sites = merge_sources(); export_all_router_rules('.', sites, {})"
@@ -234,6 +261,6 @@ jobs:
           git config user.name "GitHub Actions"
           git add domains_direct.txt domains_proxy.txt clash_rules_direct.yaml clash_rules_proxy.yaml adguard_direct.txt adguard_proxy.txt || true
           git diff --cached --quiet && echo "规则无变更，跳过提交" && exit 0
-          git commit -m "auto: 00任务链-8号 AdGuard/PassWall/Clash 规则格式化导出完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
+          git commit -m "auto: 00任务链-9号 AdGuard/PassWall/Clash 规则格式化导出完成 [$(date -u '+%Y-%m-%d %H:%M:%S')]"
           git pull --rebase origin main || true
           git push origin HEAD:main --force

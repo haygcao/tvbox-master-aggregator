@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
- 独立脚本八：策略导出器 (Task 8: 纯格式化写入，0 网络耗时，0.1 秒极速完成)
+ 独立脚本九：策略导出器 (Task 9: 纯格式化写入，0 网络耗时，0.1 秒极速完成)
 =============================================================================
 功能：
-  1. 纯粹读取 Task 7 校验好的 verified_direct_domains.json 与 verified_proxy_domains.json；
+  1. 纯粹读取 Task 8 强力清洗拦截后的 sanitized_candidate_domains.json 与 sanitized_proxy_domains.json；
   2. 纯粹读取 Task 3 提取好的 extracted_ip_addresses.json 纯 IP；
   3. 执行历史增量累加 (set.union)；
   4. 0.1 秒纯内存格式化输出 Clash, PassWall 与 AdGuard 直连与代理规则。
@@ -47,20 +47,26 @@ def read_existing_historical_rules(file_path):
     return existing
 
 def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_image_domains=None, extracted_ips=None, release_page_domains=None, py_code_domains=None):
-    print("  [Task 8: 策略导出器] 正在执行纯格式化写入 (0.1 秒极速完成)...", flush=True)
+    print("  [Task 9: 策略导出器] 正在执行纯格式化写入 (0.1 秒极速完成)...", flush=True)
 
-    verified_direct_path = os.path.join(work_dir, "verified_direct_domains.json")
-    verified_proxy_path = os.path.join(work_dir, "verified_proxy_domains.json")
+    sanitized_direct_path = os.path.join(work_dir, "sanitized_candidate_domains.json")
+    sanitized_proxy_path = os.path.join(work_dir, "sanitized_proxy_domains.json")
 
     direct_domains = set()
     proxy_domains = set()
 
-    if os.path.exists(verified_direct_path):
-        try: direct_domains.update(json.load(open(verified_direct_path)))
+    if os.path.exists(sanitized_direct_path):
+        try: direct_domains.update(json.load(open(sanitized_direct_path)))
         except Exception: pass
 
-    if os.path.exists(verified_proxy_path):
-        try: proxy_domains.update(json.load(open(verified_proxy_path)))
+    if os.path.exists(sanitized_proxy_path):
+        try: proxy_domains.update(json.load(open(sanitized_proxy_path)))
+        except Exception: pass
+
+    # 兜底读取 Task 7 校验文件
+    verified_direct_path = os.path.join(work_dir, "verified_direct_domains.json")
+    if os.path.exists(verified_direct_path):
+        try: direct_domains.update(json.load(open(verified_direct_path)))
         except Exception: pass
 
     # 读取历史规则增量累加
@@ -70,15 +76,18 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
     pure_ips = set(extracted_ips or [])
     for h in historical_items:
         if h.replace('.', '').isdigit(): pure_ips.add(h)
-        else: direct_domains.add(h)
+        else:
+            if h not in INVALID_FILE_EXTENSIONS and not h.startswith("."):
+                direct_domains.add(h)
 
     def expand_punycode_list(raw_list):
         expanded = set()
         for dom in (raw_list or []):
-            if dom and dom not in INVALID_FILE_EXTENSIONS:
-                expanded.add(dom)
-                puny = to_punycode_domain(dom)
-                if puny and puny != dom: expanded.add(puny)
+            if dom and dom not in INVALID_FILE_EXTENSIONS and not str(dom).startswith("."):
+                clean_dom = str(dom).replace('\\/', '/').replace('\\', '').strip()
+                expanded.add(clean_dom)
+                puny = to_punycode_domain(clean_dom)
+                if puny and puny != clean_dom: expanded.add(puny)
         return sorted(list(expanded))
 
     sorted_direct_doms = expand_punycode_list(direct_domains)
@@ -90,7 +99,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# =========================================================\n")
         f.write("# TVBox 视频源、发布页镜像、海报 CDN、中文 Punycode 与纯IP 增量直连列表\n")
         f.write("# =========================================================\n\n")
-        f.write("# ===== 分组: 01_通过 4 大 DNS 校验放行的国内直连域名 =====\n")
+        f.write("# ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
         for d in sorted_direct_doms: f.write(f"{d}\n")
         f.write("\n")
         if sorted_ips:
@@ -103,7 +112,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("! =========================================================\n")
         f.write("! OpenWrt AdGuard Home TVBox 视频源、发布页镜像、中文 Punycode 与纯IP 放行白名单\n")
         f.write("! =========================================================\n\n")
-        f.write("! ===== 分组: 01_通过 4 大 DNS 校验放行的国内直连域名 =====\n")
+        f.write("! ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
         for d in sorted_direct_doms: f.write(f"@@||{d}^\n")
         f.write("\n")
         if sorted_ips:
@@ -117,7 +126,7 @@ def export_grouped_router_rules(work_dir, sites, grouped_cdn_domains, dynamic_im
         f.write("# TVBox 视频源、发布页镜像、中文 Punycode 域名与纯 IP Clash 增量直连规则集\n")
         f.write("# =========================================================\n")
         f.write("payload:\n")
-        f.write("  # ===== 分组: 01_通过 4 大 DNS 校验放行的国内直连域名 =====\n")
+        f.write("  # ===== 分组: 01_通过 4 大 DNS 校验与 Task 8 强力清洗放行的国内直连域名 =====\n")
         for d in sorted_direct_doms: f.write(f"  - DOMAIN-SUFFIX,{d}\n")
         if sorted_ips:
             f.write("  # ===== 分组: 02_视频切片纯IPv4地址 =====\n")

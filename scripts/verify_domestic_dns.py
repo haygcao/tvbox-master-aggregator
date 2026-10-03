@@ -78,7 +78,6 @@ def process_dns_verification():
 
     candidate_domains = set()
 
-    # 1. 汇总读取 Task 2~6 产出的缓存文件
     for json_file in ["grouped_cdn_domains.json", "extracted_release_page_domains.json", "extracted_py_code_domains.json", "dynamic_image_domains.json"]:
         fpath = os.path.join(WORK_DIR, json_file)
         if os.path.exists(fpath):
@@ -95,7 +94,6 @@ def process_dns_verification():
     verified_direct = set()
     verified_proxy = set(GLOBAL_PROXY_DOMAINS)
 
-    # 2. 30 线程并发交叉投票校验
     with ThreadPoolExecutor(max_workers=30) as executor:
         futures = [executor.submit(verify_single_domain_consensus, dom) for dom in candidate_domains if dom]
         for f in as_completed(futures):
@@ -105,7 +103,6 @@ def process_dns_verification():
             else:
                 verified_proxy.add(dom)
 
-    # 3. 输出独立校验结果缓存
     open(os.path.join(WORK_DIR, "verified_direct_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_direct)), ensure_ascii=False, indent=2))
     open(os.path.join(WORK_DIR, "verified_proxy_domains.json"), "w", encoding="utf-8").write(json.dumps(sorted(list(verified_proxy)), ensure_ascii=False, indent=2))
 
